@@ -14,6 +14,8 @@
 		3F1FDC971BD3C72800899B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC951BD3C72800899B24 /* LaunchScreen.storyboard */; };
 		3F1FDCA21BD3C72800899B24 /* DriveCleverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDCA11BD3C72800899B24 /* DriveCleverTests.swift */; };
 		3F1FDCAD1BD3C72800899B24 /* DriveCleverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDCAC1BD3C72800899B24 /* DriveCleverUITests.swift */; };
+		3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		3F1FDCA81BD3C72800899B24 /* DriveCleverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveCleverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1FDCAC1BD3C72800899B24 /* DriveCleverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveCleverUITests.swift; sourceTree = "<group>"; };
 		3F1FDCAE1BD3C72800899B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */,
+				3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +103,8 @@
 		3F1FDC8B1BD3C72800899B24 /* DriveClever */ = {
 			isa = PBXGroup;
 			children = (
+				3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */,
+				3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */,
 				3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */,
 				3F1FDC8E1BD3C72800899B24 /* ViewController.swift */,
 				3F1FDC901BD3C72800899B24 /* Main.storyboard */,
@@ -192,6 +200,7 @@
 				TargetAttributes = {
 					3F1FDC881BD3C72800899B24 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = 3YU24VLKHN;
 					};
 					3F1FDC9C1BD3C72800899B24 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -396,6 +405,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DriveClever",
+				);
 				INFOPLIST_FILE = DriveClever/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveClever;
@@ -407,6 +421,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/DriveClever",
+				);
 				INFOPLIST_FILE = DriveClever/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveClever;
