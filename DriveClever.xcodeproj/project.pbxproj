@@ -1,0 +1,504 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F1FDC8D1BD3C72800899B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */; };
+		3F1FDC8F1BD3C72800899B24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDC8E1BD3C72800899B24 /* ViewController.swift */; };
+		3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC901BD3C72800899B24 /* Main.storyboard */; };
+		3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC931BD3C72800899B24 /* Assets.xcassets */; };
+		3F1FDC971BD3C72800899B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC951BD3C72800899B24 /* LaunchScreen.storyboard */; };
+		3F1FDCA21BD3C72800899B24 /* DriveCleverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDCA11BD3C72800899B24 /* DriveCleverTests.swift */; };
+		3F1FDCAD1BD3C72800899B24 /* DriveCleverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDCAC1BD3C72800899B24 /* DriveCleverUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F1FDC9E1BD3C72800899B24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F1FDC811BD3C72800899B24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F1FDC881BD3C72800899B24;
+			remoteInfo = DriveClever;
+		};
+		3F1FDCA91BD3C72800899B24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F1FDC811BD3C72800899B24 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F1FDC881BD3C72800899B24;
+			remoteInfo = DriveClever;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F1FDC891BD3C72800899B24 /* DriveClever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveClever.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3F1FDC8E1BD3C72800899B24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3F1FDC911BD3C72800899B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F1FDC931BD3C72800899B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F1FDC961BD3C72800899B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F1FDC981BD3C72800899B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1FDC9D1BD3C72800899B24 /* DriveCleverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveCleverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1FDCA11BD3C72800899B24 /* DriveCleverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveCleverTests.swift; sourceTree = "<group>"; };
+		3F1FDCA31BD3C72800899B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F1FDCA81BD3C72800899B24 /* DriveCleverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DriveCleverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1FDCAC1BD3C72800899B24 /* DriveCleverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriveCleverUITests.swift; sourceTree = "<group>"; };
+		3F1FDCAE1BD3C72800899B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F1FDC861BD3C72800899B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1FDC9A1BD3C72800899B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1FDCA51BD3C72800899B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F1FDC801BD3C72800899B24 = {
+			isa = PBXGroup;
+			children = (
+				3F1FDC8B1BD3C72800899B24 /* DriveClever */,
+				3F1FDCA01BD3C72800899B24 /* DriveCleverTests */,
+				3F1FDCAB1BD3C72800899B24 /* DriveCleverUITests */,
+				3F1FDC8A1BD3C72800899B24 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F1FDC8A1BD3C72800899B24 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FDC891BD3C72800899B24 /* DriveClever.app */,
+				3F1FDC9D1BD3C72800899B24 /* DriveCleverTests.xctest */,
+				3F1FDCA81BD3C72800899B24 /* DriveCleverUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F1FDC8B1BD3C72800899B24 /* DriveClever */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */,
+				3F1FDC8E1BD3C72800899B24 /* ViewController.swift */,
+				3F1FDC901BD3C72800899B24 /* Main.storyboard */,
+				3F1FDC931BD3C72800899B24 /* Assets.xcassets */,
+				3F1FDC951BD3C72800899B24 /* LaunchScreen.storyboard */,
+				3F1FDC981BD3C72800899B24 /* Info.plist */,
+			);
+			path = DriveClever;
+			sourceTree = "<group>";
+		};
+		3F1FDCA01BD3C72800899B24 /* DriveCleverTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FDCA11BD3C72800899B24 /* DriveCleverTests.swift */,
+				3F1FDCA31BD3C72800899B24 /* Info.plist */,
+			);
+			path = DriveCleverTests;
+			sourceTree = "<group>";
+		};
+		3F1FDCAB1BD3C72800899B24 /* DriveCleverUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F1FDCAC1BD3C72800899B24 /* DriveCleverUITests.swift */,
+				3F1FDCAE1BD3C72800899B24 /* Info.plist */,
+			);
+			path = DriveCleverUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F1FDC881BD3C72800899B24 /* DriveClever */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1FDCB11BD3C72800899B24 /* Build configuration list for PBXNativeTarget "DriveClever" */;
+			buildPhases = (
+				3F1FDC851BD3C72800899B24 /* Sources */,
+				3F1FDC861BD3C72800899B24 /* Frameworks */,
+				3F1FDC871BD3C72800899B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DriveClever;
+			productName = DriveClever;
+			productReference = 3F1FDC891BD3C72800899B24 /* DriveClever.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F1FDC9C1BD3C72800899B24 /* DriveCleverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1FDCB41BD3C72800899B24 /* Build configuration list for PBXNativeTarget "DriveCleverTests" */;
+			buildPhases = (
+				3F1FDC991BD3C72800899B24 /* Sources */,
+				3F1FDC9A1BD3C72800899B24 /* Frameworks */,
+				3F1FDC9B1BD3C72800899B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F1FDC9F1BD3C72800899B24 /* PBXTargetDependency */,
+			);
+			name = DriveCleverTests;
+			productName = DriveCleverTests;
+			productReference = 3F1FDC9D1BD3C72800899B24 /* DriveCleverTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F1FDCA71BD3C72800899B24 /* DriveCleverUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F1FDCB71BD3C72800899B24 /* Build configuration list for PBXNativeTarget "DriveCleverUITests" */;
+			buildPhases = (
+				3F1FDCA41BD3C72800899B24 /* Sources */,
+				3F1FDCA51BD3C72800899B24 /* Frameworks */,
+				3F1FDCA61BD3C72800899B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F1FDCAA1BD3C72800899B24 /* PBXTargetDependency */,
+			);
+			name = DriveCleverUITests;
+			productName = DriveCleverUITests;
+			productReference = 3F1FDCA81BD3C72800899B24 /* DriveCleverUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F1FDC811BD3C72800899B24 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Jahic Benjamin";
+				TargetAttributes = {
+					3F1FDC881BD3C72800899B24 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					3F1FDC9C1BD3C72800899B24 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 3F1FDC881BD3C72800899B24;
+					};
+					3F1FDCA71BD3C72800899B24 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 3F1FDC881BD3C72800899B24;
+					};
+				};
+			};
+			buildConfigurationList = 3F1FDC841BD3C72800899B24 /* Build configuration list for PBXProject "DriveClever" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F1FDC801BD3C72800899B24;
+			productRefGroup = 3F1FDC8A1BD3C72800899B24 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F1FDC881BD3C72800899B24 /* DriveClever */,
+				3F1FDC9C1BD3C72800899B24 /* DriveCleverTests */,
+				3F1FDCA71BD3C72800899B24 /* DriveCleverUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F1FDC871BD3C72800899B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1FDC971BD3C72800899B24 /* LaunchScreen.storyboard in Resources */,
+				3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */,
+				3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1FDC9B1BD3C72800899B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1FDCA61BD3C72800899B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F1FDC851BD3C72800899B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1FDC8F1BD3C72800899B24 /* ViewController.swift in Sources */,
+				3F1FDC8D1BD3C72800899B24 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1FDC991BD3C72800899B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1FDCA21BD3C72800899B24 /* DriveCleverTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F1FDCA41BD3C72800899B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F1FDCAD1BD3C72800899B24 /* DriveCleverUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F1FDC9F1BD3C72800899B24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F1FDC881BD3C72800899B24 /* DriveClever */;
+			targetProxy = 3F1FDC9E1BD3C72800899B24 /* PBXContainerItemProxy */;
+		};
+		3F1FDCAA1BD3C72800899B24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F1FDC881BD3C72800899B24 /* DriveClever */;
+			targetProxy = 3F1FDCA91BD3C72800899B24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F1FDC901BD3C72800899B24 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1FDC911BD3C72800899B24 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F1FDC951BD3C72800899B24 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F1FDC961BD3C72800899B24 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F1FDCAF1BD3C72800899B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F1FDCB01BD3C72800899B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F1FDCB21BD3C72800899B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DriveClever/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveClever;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3F1FDCB31BD3C72800899B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = DriveClever/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveClever;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3F1FDCB51BD3C72800899B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DriveCleverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveCleverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveClever.app/DriveClever";
+			};
+			name = Debug;
+		};
+		3F1FDCB61BD3C72800899B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DriveCleverTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveCleverTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DriveClever.app/DriveClever";
+			};
+			name = Release;
+		};
+		3F1FDCB81BD3C72800899B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DriveCleverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveCleverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DriveClever;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3F1FDCB91BD3C72800899B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DriveCleverUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveCleverUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = DriveClever;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F1FDC841BD3C72800899B24 /* Build configuration list for PBXProject "DriveClever" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1FDCAF1BD3C72800899B24 /* Debug */,
+				3F1FDCB01BD3C72800899B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F1FDCB11BD3C72800899B24 /* Build configuration list for PBXNativeTarget "DriveClever" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1FDCB21BD3C72800899B24 /* Debug */,
+				3F1FDCB31BD3C72800899B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3F1FDCB41BD3C72800899B24 /* Build configuration list for PBXNativeTarget "DriveCleverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1FDCB51BD3C72800899B24 /* Debug */,
+				3F1FDCB61BD3C72800899B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3F1FDCB71BD3C72800899B24 /* Build configuration list for PBXNativeTarget "DriveCleverUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F1FDCB81BD3C72800899B24 /* Debug */,
+				3F1FDCB91BD3C72800899B24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F1FDC811BD3C72800899B24 /* Project object */;
+}
