@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		308863D61BD97A1C000C73FE /* Wit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 308863D41BD97A1C000C73FE /* Wit.bundle */; };
+		308863D71BD97A1C000C73FE /* Wit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863D51BD97A1C000C73FE /* Wit.framework */; };
 		3F1FDC8D1BD3C72800899B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */; };
 		3F1FDC8F1BD3C72800899B24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDC8E1BD3C72800899B24 /* ViewController.swift */; };
 		3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC901BD3C72800899B24 /* Main.storyboard */; };
@@ -14,8 +16,8 @@
 		3F1FDC971BD3C72800899B24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC951BD3C72800899B24 /* LaunchScreen.storyboard */; };
 		3F1FDCA21BD3C72800899B24 /* DriveCleverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDCA11BD3C72800899B24 /* DriveCleverTests.swift */; };
 		3F1FDCAD1BD3C72800899B24 /* DriveCleverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDCAC1BD3C72800899B24 /* DriveCleverUITests.swift */; };
-		3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */; };
+		3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		308863D41BD97A1C000C73FE /* Wit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Wit.bundle; path = "../../../../Downloads/Wit-4/Wit.bundle"; sourceTree = "<group>"; };
+		308863D51BD97A1C000C73FE /* Wit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wit.framework; path = "../../../../Downloads/Wit-4/Wit.framework"; sourceTree = "<group>"; };
 		3F1FDC891BD3C72800899B24 /* DriveClever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveClever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F1FDC8E1BD3C72800899B24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +64,7 @@
 			files = (
 				3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */,
 				3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */,
+				308863D71BD97A1C000C73FE /* Wit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +112,8 @@
 				3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */,
 				3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */,
 				3F1FDC8E1BD3C72800899B24 /* ViewController.swift */,
+				308863D41BD97A1C000C73FE /* Wit.bundle */,
+				308863D51BD97A1C000C73FE /* Wit.framework */,
 				3F1FDC901BD3C72800899B24 /* Main.storyboard */,
 				3F1FDC931BD3C72800899B24 /* Assets.xcassets */,
 				3F1FDC951BD3C72800899B24 /* LaunchScreen.storyboard */,
@@ -239,6 +246,7 @@
 			files = (
 				3F1FDC971BD3C72800899B24 /* LaunchScreen.storyboard in Resources */,
 				3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */,
+				308863D61BD97A1C000C73FE /* Wit.bundle in Resources */,
 				3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,6 +508,7 @@
 				3F1FDCB31BD3C72800899B24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F1FDCB41BD3C72800899B24 /* Build configuration list for PBXNativeTarget "DriveCleverTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +517,7 @@
 				3F1FDCB61BD3C72800899B24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F1FDCB71BD3C72800899B24 /* Build configuration list for PBXNativeTarget "DriveCleverUITests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +526,7 @@
 				3F1FDCB91BD3C72800899B24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
