@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		308863D61BD97A1C000C73FE /* Wit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 308863D41BD97A1C000C73FE /* Wit.bundle */; };
 		308863D71BD97A1C000C73FE /* Wit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863D51BD97A1C000C73FE /* Wit.framework */; };
+		308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863D81BD97C4B000C73FE /* AVFoundation.framework */; };
+		308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */; };
+		308863DD1BD97C6B000C73FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */; };
+		308863DF1BD97C76000C73FE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DE1BD97C76000C73FE /* CoreLocation.framework */; };
 		3F1FDC8D1BD3C72800899B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */; };
 		3F1FDC8F1BD3C72800899B24 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDC8E1BD3C72800899B24 /* ViewController.swift */; };
 		3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC901BD3C72800899B24 /* Main.storyboard */; };
@@ -40,6 +44,10 @@
 /* Begin PBXFileReference section */
 		308863D41BD97A1C000C73FE /* Wit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Wit.bundle; path = "../../../../Downloads/Wit-4/Wit.bundle"; sourceTree = "<group>"; };
 		308863D51BD97A1C000C73FE /* Wit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wit.framework; path = "../../../../Downloads/Wit-4/Wit.framework"; sourceTree = "<group>"; };
+		308863D81BD97C4B000C73FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		308863DE1BD97C76000C73FE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3F1FDC891BD3C72800899B24 /* DriveClever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveClever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F1FDC8E1BD3C72800899B24 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +70,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308863DF1BD97C76000C73FE /* CoreLocation.framework in Frameworks */,
+				308863DD1BD97C6B000C73FE /* SystemConfiguration.framework in Frameworks */,
+				308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */,
+				308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */,
 				3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */,
 				3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */,
 				308863D71BD97A1C000C73FE /* Wit.framework in Frameworks */,
@@ -88,6 +100,10 @@
 		3F1FDC801BD3C72800899B24 = {
 			isa = PBXGroup;
 			children = (
+				308863DE1BD97C76000C73FE /* CoreLocation.framework */,
+				308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */,
+				308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */,
+				308863D81BD97C4B000C73FE /* AVFoundation.framework */,
 				3F1FDC8B1BD3C72800899B24 /* DriveClever */,
 				3F1FDCA01BD3C72800899B24 /* DriveCleverTests */,
 				3F1FDCAB1BD3C72800899B24 /* DriveCleverUITests */,
