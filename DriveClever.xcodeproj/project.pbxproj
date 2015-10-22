@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		308863D61BD97A1C000C73FE /* Wit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 308863D41BD97A1C000C73FE /* Wit.bundle */; };
-		308863D71BD97A1C000C73FE /* Wit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863D51BD97A1C000C73FE /* Wit.framework */; };
+		3023DA7F1BD97E5E001D9D5A /* Wit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3023DA7D1BD97E5E001D9D5A /* Wit.bundle */; };
+		3023DA801BD97E5E001D9D5A /* Wit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3023DA7E1BD97E5E001D9D5A /* Wit.framework */; };
 		308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863D81BD97C4B000C73FE /* AVFoundation.framework */; };
 		308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */; };
 		308863DD1BD97C6B000C73FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */; };
@@ -42,8 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		308863D41BD97A1C000C73FE /* Wit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Wit.bundle; path = "../../../../Downloads/Wit-4/Wit.bundle"; sourceTree = "<group>"; };
-		308863D51BD97A1C000C73FE /* Wit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Wit.framework; path = "../../../../Downloads/Wit-4/Wit.framework"; sourceTree = "<group>"; };
+		3023DA7D1BD97E5E001D9D5A /* Wit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Wit.bundle; sourceTree = "<group>"; };
+		3023DA7E1BD97E5E001D9D5A /* Wit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wit.framework; sourceTree = "<group>"; };
 		308863D81BD97C4B000C73FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -74,9 +74,9 @@
 				308863DD1BD97C6B000C73FE /* SystemConfiguration.framework in Frameworks */,
 				308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */,
 				308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */,
+				3023DA801BD97E5E001D9D5A /* Wit.framework in Frameworks */,
 				3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */,
 				3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */,
-				308863D71BD97A1C000C73FE /* Wit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,12 +124,12 @@
 		3F1FDC8B1BD3C72800899B24 /* DriveClever */ = {
 			isa = PBXGroup;
 			children = (
+				3023DA7D1BD97E5E001D9D5A /* Wit.bundle */,
+				3023DA7E1BD97E5E001D9D5A /* Wit.framework */,
 				3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */,
 				3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */,
 				3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */,
 				3F1FDC8E1BD3C72800899B24 /* ViewController.swift */,
-				308863D41BD97A1C000C73FE /* Wit.bundle */,
-				308863D51BD97A1C000C73FE /* Wit.framework */,
 				3F1FDC901BD3C72800899B24 /* Main.storyboard */,
 				3F1FDC931BD3C72800899B24 /* Assets.xcassets */,
 				3F1FDC951BD3C72800899B24 /* LaunchScreen.storyboard */,
@@ -262,7 +262,7 @@
 			files = (
 				3F1FDC971BD3C72800899B24 /* LaunchScreen.storyboard in Resources */,
 				3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */,
-				308863D61BD97A1C000C73FE /* Wit.bundle in Resources */,
+				3023DA7F1BD97E5E001D9D5A /* Wit.bundle in Resources */,
 				3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
