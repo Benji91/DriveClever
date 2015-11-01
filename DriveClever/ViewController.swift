@@ -29,7 +29,73 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         loginButton.delegate = self
         self.view.addSubview(loginButton)
         
+        returnUserData()
+
         
+        
+        
+        
+        let credentialProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
+        
+        
+        let token: String = FBSDKAccessToken.currentAccessToken().tokenString
+        let logins: NSDictionary = NSDictionary(dictionary: ["graph.facebook.com" : token])
+        
+        credentialProvider.logins = logins as [NSObject : AnyObject]
+        
+        let configuration = AWSServiceConfiguration(region: DefaultServiceRegionType, credentialsProvider: credentialProvider)
+        
+        
+        AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+        
+        
+        
+        let firstName = "Pede"
+        let lastName = "encule"
+        //invoke lambda function asynchronously
+        NSLog("Invoking lambda function for firtsname=\(firstName) for lastname=\(lastName)")
+        let lambdaInvoker = AWSLambdaInvoker.defaultLambdaInvoker()
+        let task = lambdaInvoker.invokeFunction("testAPI", JSONObject: ["firstName":firstName ,"lastName":lastName])
+        task.continueWithBlock({ (task: AWSTask!) -> AWSTask! in
+            
+            if (task.error != nil) {
+                NSLog("Invoke Lambda returned an error : \(task.error)")
+                dispatch_async(dispatch_get_main_queue(), {
+                    //self.greeting.text = "Error"
+                    //self.deviceType.text = task.error.description
+                    //SVProgressHUD.dismiss()
+                })
+            }
+            else {
+                if (task.result != nil) {
+                    NSLog("Invoke Lambda : result = \(task.result)")
+                    
+                    //upate text label on the main UI thread
+                    dispatch_async(dispatch_get_main_queue(), {
+                        //let r = task.result as! Dictionary<String,String>
+                        //self.greeting.text = r["message"]
+                        //self.deviceType.text = r["device"]
+                        //SVProgressHUD.dismiss()
+                    })
+                    
+                } else {
+                    NSLog("Invoke Lambda : unknow result : \(task)");
+                    NSLog("Exception : \(task.exception)")
+                    NSLog("Error : \(task.error)" )
+                    dispatch_async(dispatch_get_main_queue(), {
+                        //self.greeting.text = "Error"
+                        //SVProgressHUD.dismiss()
+                    })
+                }
+            }
+            return nil
+            
+        })
+        
+        
+        
+        
+
         
     }
     
