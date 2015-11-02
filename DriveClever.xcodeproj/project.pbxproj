@@ -41,7 +41,7 @@
 		3F92AC481BE28F6A0013F6F5 /* AWSCognito.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC471BE28F6A0013F6F5 /* AWSCognito.framework */; };
 		3F92AC4A1BE28FD30013F6F5 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC491BE28FD30013F6F5 /* libsqlite3.tbd */; };
 		3F92AC4C1BE28FDE0013F6F5 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC4B1BE28FDE0013F6F5 /* libz.tbd */; };
-		3F92AC571BE2D6C90013F6F5 /* Contants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92AC561BE2D6C90013F6F5 /* Contants.swift */; };
+		3F92AC571BE2D6C90013F6F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F92AC561BE2D6C90013F6F5 /* Constants.swift */; };
 		3F9D8A5E1BE420C7008338F6 /* APIAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D8A5D1BE420C7008338F6 /* APIAccess.swift */; };
 		3F9D8A601BE6D658008338F6 /* Situation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9D8A5F1BE6D658008338F6 /* Situation.swift */; };
 /* End PBXBuildFile section */
@@ -105,7 +105,7 @@
 		3F92AC491BE28FD30013F6F5 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		3F92AC4B1BE28FDE0013F6F5 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		3F92AC551BE2D1F50013F6F5 /* DriveClever-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DriveClever-Bridging-Header.h"; sourceTree = "<group>"; };
-		3F92AC561BE2D6C90013F6F5 /* Contants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contants.swift; sourceTree = "<group>"; };
+		3F92AC561BE2D6C90013F6F5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3F9D8A5D1BE420C7008338F6 /* APIAccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIAccess.swift; sourceTree = "<group>"; };
 		3F9D8A5F1BE6D658008338F6 /* Situation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Situation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,18 +184,18 @@
 		3F1FDC8B1BD3C72800899B24 /* DriveClever */ = {
 			isa = PBXGroup;
 			children = (
-				3F92AC561BE2D6C90013F6F5 /* Contants.swift */,
+				3F92AC561BE2D6C90013F6F5 /* Constants.swift */,
 				3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */,
 				3F9D8A5D1BE420C7008338F6 /* APIAccess.swift */,
 				3F9D8A5F1BE6D658008338F6 /* Situation.swift */,
 				3F1FDC8E1BD3C72800899B24 /* ViewController.swift */,
 				3F1FDC901BD3C72800899B24 /* Main.storyboard */,
-				3F1FDC931BD3C72800899B24 /* Assets.xcassets */,
 				3F1FDC951BD3C72800899B24 /* LaunchScreen.storyboard */,
 				3F1FDC981BD3C72800899B24 /* Info.plist */,
 				3F92AC551BE2D1F50013F6F5 /* DriveClever-Bridging-Header.h */,
 				3F92AC4B1BE28FDE0013F6F5 /* libz.tbd */,
 				3F92AC491BE28FD30013F6F5 /* libsqlite3.tbd */,
+				3F1FDC931BD3C72800899B24 /* Assets.xcassets */,
 				3F92AC581BE2D71F0013F6F5 /* Frameworks */,
 				3023DA7D1BD97E5E001D9D5A /* Wit.bundle */,
 				3023DA7E1BD97E5E001D9D5A /* Wit.framework */,
@@ -387,7 +387,7 @@
 				3F1FDC8D1BD3C72800899B24 /* AppDelegate.swift in Sources */,
 				3F9D8A601BE6D658008338F6 /* Situation.swift in Sources */,
 				3F9D8A5E1BE420C7008338F6 /* APIAccess.swift in Sources */,
-				3F92AC571BE2D6C90013F6F5 /* Contants.swift in Sources */,
+				3F92AC571BE2D6C90013F6F5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import FBSDKCoreKit
+import FBSDKLoginKit
 
 
 
@@ -18,20 +19,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication,didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        
         AWSLogger.defaultLogger().logLevel = AWSLogLevel.Verbose
-
-        
-                
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-
+        let result = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        return result
     }
     
     
     
     func application(app: UIApplication, openURL url: NSURL, options: [String : AnyObject]) -> Bool {
-        return FBSDKApplicationDelegate.sharedInstance().application(app, openURL: url,  sourceApplication: options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String,
+        
+        let result = FBSDKApplicationDelegate.sharedInstance().application(app, openURL: url,  sourceApplication: options["UIApplicationOpenURLOptionsSourceApplicationKey"] as! String,
             annotation: nil)
+        
+        return result
+
     }
     
     
