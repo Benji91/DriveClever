@@ -1,29 +1,29 @@
 //
-//  FirstViewController.swift
+//  LoginViewController.swift
 //  DriveClever
 //
-//  Created by Jahic Benjamin on 16/10/15.
-//  Copyright © 2015 Jahic Benjamin. All rights reserved.
+//  Created by Ibrahim Tahirou on 10/25/15.
+//  Copyright © 2015 Ibrahim Tahirou. All rights reserved.
 //
 
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-
-class ViewController: UIViewController,FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
     var loginButton = FBSDKLoginButton()
-   
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
+
         if(FBSDKAccessToken.currentAccessToken()==nil){
             print("Not logged in")
         }else{
             print("Logged in")
             APIAccess.connectToAmazonWebServices()
             APIAccess.testAPI()
+            self.performSegueWithIdentifier("loginTabSegue", sender: self)
+
         }
         
         loginButton = FBSDKLoginButton()
@@ -31,11 +31,21 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
         loginButton.center=self.view.center
         loginButton.delegate = self
         self.view.addSubview(loginButton)
-        
+
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    @IBAction func loginWithFacebookButtonAction(sender: AnyObject) {
+        loginButton = FBSDKLoginButton()
+        loginButton.readPermissions=["public_profile","email","user_friends"]
+        loginButton.center=self.view.center
+        loginButton.delegate = self
+
     }
     
     
@@ -46,10 +56,8 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
             returnUserData()
             APIAccess.connectToAmazonWebServices()
             APIAccess.testAPI()
-
-            self.performSegueWithIdentifier("showNew", sender: self)
+            self.performSegueWithIdentifier("loginTabSegue", sender: self)
             
-
         }else{
             print("ERROR")
             print(error.localizedDescription)
@@ -83,5 +91,15 @@ class ViewController: UIViewController,FBSDKLoginButtonDelegate {
             }
         })
     }
-}
 
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}
