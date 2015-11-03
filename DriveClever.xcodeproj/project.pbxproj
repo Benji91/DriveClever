@@ -13,6 +13,7 @@
 		308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */; };
 		308863DD1BD97C6B000C73FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */; };
 		308863DF1BD97C76000C73FE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DE1BD97C76000C73FE /* CoreLocation.framework */; };
+		30A1A7981BE8EE5F008F878D /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A1A7971BE8EE5F008F878D /* AWSCore.framework */; };
 		3F1FDC8D1BD3C72800899B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */; };
 		3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC901BD3C72800899B24 /* Main.storyboard */; };
 		3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC931BD3C72800899B24 /* Assets.xcassets */; };
@@ -23,7 +24,6 @@
 		3F92AC371BE28F550013F6F5 /* AWSAPIGateway.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC271BE28F550013F6F5 /* AWSAPIGateway.framework */; };
 		3F92AC381BE28F550013F6F5 /* AWSAutoScaling.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC281BE28F550013F6F5 /* AWSAutoScaling.framework */; };
 		3F92AC391BE28F550013F6F5 /* AWSCloudWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC291BE28F550013F6F5 /* AWSCloudWatch.framework */; };
-		3F92AC3A1BE28F550013F6F5 /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC2A1BE28F550013F6F5 /* AWSCore.framework */; };
 		3F92AC3B1BE28F550013F6F5 /* AWSDynamoDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC2B1BE28F550013F6F5 /* AWSDynamoDB.framework */; };
 		3F92AC3C1BE28F550013F6F5 /* AWSEC2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC2C1BE28F550013F6F5 /* AWSEC2.framework */; };
 		3F92AC3D1BE28F550013F6F5 /* AWSElasticLoadBalancing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F92AC2D1BE28F550013F6F5 /* AWSElasticLoadBalancing.framework */; };
@@ -85,6 +85,7 @@
 		308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		308863DE1BD97C76000C73FE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		30A1A7971BE8EE5F008F878D /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = ../AWSCore.framework; sourceTree = "<group>"; };
 		3F1FDC891BD3C72800899B24 /* DriveClever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveClever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F1FDC911BD3C72800899B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -101,7 +102,6 @@
 		3F92AC271BE28F550013F6F5 /* AWSAPIGateway.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSAPIGateway.framework; path = ../AWSAPIGateway.framework; sourceTree = "<group>"; };
 		3F92AC281BE28F550013F6F5 /* AWSAutoScaling.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSAutoScaling.framework; path = ../AWSAutoScaling.framework; sourceTree = "<group>"; };
 		3F92AC291BE28F550013F6F5 /* AWSCloudWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCloudWatch.framework; path = ../AWSCloudWatch.framework; sourceTree = "<group>"; };
-		3F92AC2A1BE28F550013F6F5 /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = ../AWSCore.framework; sourceTree = "<group>"; };
 		3F92AC2B1BE28F550013F6F5 /* AWSDynamoDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSDynamoDB.framework; path = ../AWSDynamoDB.framework; sourceTree = "<group>"; };
 		3F92AC2C1BE28F550013F6F5 /* AWSEC2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSEC2.framework; path = ../AWSEC2.framework; sourceTree = "<group>"; };
 		3F92AC2D1BE28F550013F6F5 /* AWSElasticLoadBalancing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSElasticLoadBalancing.framework; path = ../AWSElasticLoadBalancing.framework; sourceTree = "<group>"; };
@@ -152,10 +152,10 @@
 				3F92AC441BE28F550013F6F5 /* AWSSimpleDB.framework in Frameworks */,
 				3F92AC411BE28F550013F6F5 /* AWSMobileAnalytics.framework in Frameworks */,
 				3F92AC461BE28F550013F6F5 /* AWSSQS.framework in Frameworks */,
+				30A1A7981BE8EE5F008F878D /* AWSCore.framework in Frameworks */,
 				3F92AC431BE28F550013F6F5 /* AWSSES.framework in Frameworks */,
 				3F92AC401BE28F550013F6F5 /* AWSMachineLearning.framework in Frameworks */,
 				3F92AC481BE28F6A0013F6F5 /* AWSCognito.framework in Frameworks */,
-				3F92AC3A1BE28F550013F6F5 /* AWSCore.framework in Frameworks */,
 				308863DF1BD97C76000C73FE /* CoreLocation.framework in Frameworks */,
 				3F92AC371BE28F550013F6F5 /* AWSAPIGateway.framework in Frameworks */,
 				3F92AC381BE28F550013F6F5 /* AWSAutoScaling.framework in Frameworks */,
@@ -254,11 +254,11 @@
 		3F92AC581BE2D71F0013F6F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				30A1A7971BE8EE5F008F878D /* AWSCore.framework */,
 				3F92AC471BE28F6A0013F6F5 /* AWSCognito.framework */,
 				3F92AC271BE28F550013F6F5 /* AWSAPIGateway.framework */,
 				3F92AC281BE28F550013F6F5 /* AWSAutoScaling.framework */,
 				3F92AC291BE28F550013F6F5 /* AWSCloudWatch.framework */,
-				3F92AC2A1BE28F550013F6F5 /* AWSCore.framework */,
 				3F92AC2B1BE28F550013F6F5 /* AWSDynamoDB.framework */,
 				3F92AC2C1BE28F550013F6F5 /* AWSEC2.framework */,
 				3F92AC2D1BE28F550013F6F5 /* AWSElasticLoadBalancing.framework */,
