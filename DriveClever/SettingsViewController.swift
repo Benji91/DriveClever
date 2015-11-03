@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -44,6 +46,13 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
+        if(tableData[row] == "Logout") {
+            let loginManager = FBSDKLoginManager()
+            loginManager.logOut()
+            self.performSegueWithIdentifier("logoutSegue", sender: self)
+
+        }
+        
         print(tableData[row])
         
     }

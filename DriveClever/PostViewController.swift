@@ -29,6 +29,11 @@ class PostViewController: UIViewController, UITextFieldDelegate {
 
     
     @IBAction func submitButtonAction(sender: AnyObject) {
+        let title = titleLabel.text
+        let type = typeLabel.text
+        let location = locationLabel.text
+        let address = addressLabel.text
+        print(title!+type!+location!+address!)
     }
     
     

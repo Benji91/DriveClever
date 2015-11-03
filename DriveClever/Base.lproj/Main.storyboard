@@ -288,6 +288,7 @@
                     <tabBarItem key="tabBarItem" title="Setting" image="setting.png" id="zSu-0g-UFZ"/>
                     <connections>
                         <outlet property="settingsTable" destination="IWM-Qd-RLN" id="yRV-mh-fSP"/>
+                        <segue destination="BYZ-38-t0r" kind="push" identifier="logoutSegue" id="dFM-KD-b9i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42e-nC-bBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -320,4 +321,7 @@
         <image name="posts.png" width="32" height="32"/>
         <image name="setting.png" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="dFM-KD-b9i"/>
+    </inferredMetricsTieBreakers>
 </document>
