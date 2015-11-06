@@ -21,7 +21,7 @@ class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
         }else{
             print("Logged in")
             APIAccess.connectToAmazonWebServices()
-            APIAccess.testAPI()
+            APIAccess.reportSituation(Situation())
             self.performSegueWithIdentifier("loginTabSegue", sender: self)
 
         }

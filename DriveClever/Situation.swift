@@ -14,15 +14,15 @@ class Situation{
     var id = ""
     
     /*GPS Coordinates of a Situation provided by the phone*/
-    var lat = 0.0
-    var lng = 0.0
+    var lat = 1.0
+    var lng = 1.0
     
     /*Statistical Data of the situations created*/
     var createdBy = ""
     var createdDate = ""
     
     /*Type of a situation*/
-    var type = ""
+    var type = "xy"
     
     /*Crisis is either open or closed*/
     var closed = false
@@ -43,6 +43,9 @@ class Situation{
     /* for type == "Work"*/
     //Double length; // ~ TrafficJam
     var jamPossibility = 0.0
+    init(){
+        
+    }
 
     
 }
