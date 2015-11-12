@@ -22,13 +22,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     var config : PNConfiguration
     
     override init() {
-        config = PNConfiguration(publishKey: "Demo", subscribeKey: "Demo")
+        config = PNConfiguration(publishKey: "pub-c-3a992903-bd4b-475b-a76e-bab6f2c23392", subscribeKey: "sub-c-4844d2d2-7e9a-11e5-a643-02ee2ddab7fe")
         client = PubNub.clientWithConfiguration(config)
         client.subscribeToChannels(["Your_Channel"], withPresence: false)
         client.publish("Swift+PubNub!", toChannel: "Your_Channel", compressed: false, withCompletion: nil)
         
         super.init()
         client.addListener(self)
+    }
+    func client(client: PubNub!, didReceiveMessage message: PNMessageResult!) {
+        print(message)
     }
     
     func application(application: UIApplication,didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
