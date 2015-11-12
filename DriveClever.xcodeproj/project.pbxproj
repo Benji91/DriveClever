@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		3023DA7F1BD97E5E001D9D5A /* Wit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3023DA7D1BD97E5E001D9D5A /* Wit.bundle */; };
 		3023DA801BD97E5E001D9D5A /* Wit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3023DA7E1BD97E5E001D9D5A /* Wit.framework */; };
+		302519B91BF5335D0082984A /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B71BF5335D0082984A /* CocoaLumberjack.framework */; };
+		302519BA1BF5335D0082984A /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B81BF5335D0082984A /* PubNub.framework */; };
+		302519BB1BF533840082984A /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B71BF5335D0082984A /* CocoaLumberjack.framework */; };
+		302519BC1BF533840082984A /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B71BF5335D0082984A /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		302519BD1BF533840082984A /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B81BF5335D0082984A /* PubNub.framework */; };
+		302519BE1BF533840082984A /* PubNub.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B81BF5335D0082984A /* PubNub.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863D81BD97C4B000C73FE /* AVFoundation.framework */; };
 		308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */; };
 		308863DD1BD97C6B000C73FE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */; };
@@ -82,9 +88,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		302519BF1BF533850082984A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				302519BE1BF533840082984A /* PubNub.framework in Embed Frameworks */,
+				302519BC1BF533840082984A /* CocoaLumberjack.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		3023DA7D1BD97E5E001D9D5A /* Wit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Wit.bundle; sourceTree = "<group>"; };
 		3023DA7E1BD97E5E001D9D5A /* Wit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wit.framework; sourceTree = "<group>"; };
+		302519B71BF5335D0082984A /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = "<group>"; };
+		302519B81BF5335D0082984A /* PubNub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PubNub.framework; sourceTree = "<group>"; };
 		308863D81BD97C4B000C73FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		308863DA1BD97C5F000C73FE /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		308863DC1BD97C6B000C73FE /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -161,6 +184,7 @@
 				3F92AC411BE28F550013F6F5 /* AWSMobileAnalytics.framework in Frameworks */,
 				3F92AC461BE28F550013F6F5 /* AWSSQS.framework in Frameworks */,
 				30A1A7981BE8EE5F008F878D /* AWSCore.framework in Frameworks */,
+				302519BD1BF533840082984A /* PubNub.framework in Frameworks */,
 				3F92AC431BE28F550013F6F5 /* AWSSES.framework in Frameworks */,
 				3F92AC401BE28F550013F6F5 /* AWSMachineLearning.framework in Frameworks */,
 				3F92AC481BE28F6A0013F6F5 /* AWSCognito.framework in Frameworks */,
@@ -168,14 +192,17 @@
 				3F92AC371BE28F550013F6F5 /* AWSAPIGateway.framework in Frameworks */,
 				3F92AC381BE28F550013F6F5 /* AWSAutoScaling.framework in Frameworks */,
 				308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */,
+				302519BB1BF533840082984A /* CocoaLumberjack.framework in Frameworks */,
 				308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */,
 				3F92AC3E1BE28F550013F6F5 /* AWSKinesis.framework in Frameworks */,
 				3F92AC3C1BE28F550013F6F5 /* AWSEC2.framework in Frameworks */,
 				3023DA801BD97E5E001D9D5A /* Wit.framework in Frameworks */,
+				302519B91BF5335D0082984A /* CocoaLumberjack.framework in Frameworks */,
 				3F92AC3F1BE28F550013F6F5 /* AWSLambda.framework in Frameworks */,
 				3F92AC421BE28F550013F6F5 /* AWSS3.framework in Frameworks */,
 				3F92AC451BE28F550013F6F5 /* AWSSNS.framework in Frameworks */,
 				3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */,
+				302519BA1BF5335D0082984A /* PubNub.framework in Frameworks */,
 				3F92AC3B1BE28F550013F6F5 /* AWSDynamoDB.framework in Frameworks */,
 				3F92AC3D1BE28F550013F6F5 /* AWSElasticLoadBalancing.framework in Frameworks */,
 				3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */,
@@ -266,6 +293,8 @@
 		3F92AC581BE2D71F0013F6F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				302519B71BF5335D0082984A /* CocoaLumberjack.framework */,
+				302519B81BF5335D0082984A /* PubNub.framework */,
 				30A1A7971BE8EE5F008F878D /* AWSCore.framework */,
 				3F92AC471BE28F6A0013F6F5 /* AWSCognito.framework */,
 				3F92AC271BE28F550013F6F5 /* AWSAPIGateway.framework */,
@@ -334,6 +363,7 @@
 				3F1FDC851BD3C72800899B24 /* Sources */,
 				3F1FDC861BD3C72800899B24 /* Frameworks */,
 				3F1FDC871BD3C72800899B24 /* Resources */,
+				302519BF1BF533850082984A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
