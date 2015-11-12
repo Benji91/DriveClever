@@ -126,20 +126,20 @@ class APIAccess{
             {
                 
                 (task: AWSTask!) -> AWSTask! in
-                
                 if (task.error != nil) { // NO ERROR OCCURES
                     NSLog("Invoke Lambda returned an error : \(task.error)")
                     dispatch_async(dispatch_get_main_queue(), {
-                        //self.greeting.text = "Error"
-                        //self.deviceType.text = task.error.description
+                        //let r = task.result as! Dictionary<String,String>
+                        //self.greeting.text = r["message"]
+                        //self.deviceType.text = r["device"]
                         //SVProgressHUD.dismiss()
                     })
+                    requestSituationsResponse(task)
                 }
-                else {
+                else{
                     if (task.result != nil) { //WE HAVE A KNOWN RESULT
                         
                         NSLog("Invoke Lambda : result = \(task.result)")
-                        
                         //upate text label on the main UI thread if there is anyy
                         dispatch_async(dispatch_get_main_queue(), {
                             //let r = task.result as! Dictionary<String,String>
@@ -164,8 +164,7 @@ class APIAccess{
                 return task
         })
         
-        
-        return ""
+        return true
         
     }
 
@@ -236,6 +235,7 @@ class APIAccess{
         
         return true
     }
+
     
     /*
     * Callback function if results were received.

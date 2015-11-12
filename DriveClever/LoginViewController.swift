@@ -10,45 +10,74 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 
-class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
-    var loginButton = FBSDKLoginButton()
 
+class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
+    var loginButton = FBSDKLoginButton()
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Default.png")!)
+        
         if(FBSDKAccessToken.currentAccessToken()==nil){
             print("Not logged in")
         }else{
             print("Logged in")
             APIAccess.connectToAmazonWebServices()
-            APIAccess.reportSituation(Situation())
+            APIAccess.testAPI()
             self.performSegueWithIdentifier("loginTabSegue", sender: self)
-
+            
         }
-        
-        loginButton = FBSDKLoginButton()
+        //This portion will be used for FB Default Button//
+        /*loginButton = FBSDKLoginButton()
         loginButton.readPermissions=["public_profile","email","user_friends"]
         loginButton.center=self.view.center
         loginButton.delegate = self
-        self.view.addSubview(loginButton)
-
+        self.view.addSubview(loginButton)*/
+        
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     
+    
     @IBAction func loginWithFacebookButtonAction(sender: AnyObject) {
-        loginButton = FBSDKLoginButton()
+        //This portion will be used for FB Default Button//
+        /*loginButton = FBSDKLoginButton()
         loginButton.readPermissions=["public_profile","email","user_friends"]
         loginButton.center=self.view.center
-        loginButton.delegate = self
-
+        loginButton.delegate = self*/
+        
+        let login = FBSDKLoginManager.init()
+        login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (FBSDKLoginManagerLoginResult result, NSError error) -> Void in
+            if(error != nil) {
+                print("Process error")
+                print(error.localizedDescription)
+                //This segue should be removed , I have used as Im not the authorised user for this app//---Facebook Login
+                self.performSegueWithIdentifier("loginTabSegue", sender: self)
+                
+            }
+            else if(result.isCancelled) {
+                print("Cancelled")
+            }
+            else {
+                print("Logged In")
+                self.returnUserData()
+                APIAccess.connectToAmazonWebServices()
+                APIAccess.testAPI()
+                self.performSegueWithIdentifier("loginTabSegue", sender: self)
+            }
+        }
     }
     
-    
+    //This will be used for login with FB default Button
     func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!) {
         
         if(error==nil){
@@ -91,15 +120,16 @@ class LoginViewController: UIViewController,FBSDKLoginButtonDelegate {
             }
         })
     }
-
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }

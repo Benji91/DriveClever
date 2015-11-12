@@ -7,6 +7,7 @@
 //
 
 import UIKit
+let debug = 1
 
 class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -18,10 +19,10 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -32,14 +33,21 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return tableData.count
     }
     
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
         
         let row = indexPath.row
-        cell.textLabel?.text = tableData[row]
-        cell.imageView?.image = UIImage(named: tableIcon[row])
+        let label = self.view.viewWithTag(2) as? UILabel
+        label?.text = tableData[row]
+        let imgView = self.view.viewWithTag(1) as? UIImageView
+        imgView?.image = UIImage(named: tableIcon[row])
         
+        imgView!.backgroundColor = UIColor.whiteColor()
+        imgView!.layer.cornerRadius = 8
+        imgView!.layer.borderWidth = 2
+        imgView!.layer.borderColor = UIColor.whiteColor().CGColor
         return cell
         
     }
@@ -49,17 +57,17 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         print(tableData[row])
         
     }
-
     
-
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
