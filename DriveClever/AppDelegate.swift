@@ -13,9 +13,23 @@ import FBSDKLoginKit
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     
     var window: UIWindow?
+    
+    
+    var client : PubNub
+    var config : PNConfiguration
+    
+    override init() {
+        config = PNConfiguration(publishKey: "Demo", subscribeKey: "Demo")
+        client = PubNub.clientWithConfiguration(config)
+        client.subscribeToChannels(["Your_Channel"], withPresence: false)
+        client.publish("Swift+PubNub!", toChannel: "Your_Channel", compressed: false, withCompletion: nil)
+        
+        super.init()
+        client.addListener(self)
+    }
     
     func application(application: UIApplication,didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.

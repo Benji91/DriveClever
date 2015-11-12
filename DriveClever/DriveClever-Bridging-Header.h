@@ -16,6 +16,8 @@
 #import <AWSCognito/AWSCognito.h>
 #import <AWSLambda/AWSLambda.h>
 #import <AWSDynamoDB/AWSDynamoDB.h>
+#import <PubNub/PubNub.h>
+
 
 
 #endif /* DriveClever_Bridging_Header_h */
