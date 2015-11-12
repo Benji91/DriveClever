@@ -1,19 +1,14 @@
 //
-//  PostViewController.swift
+//  WarningViewController.swift
 //  DriveClever
 //
-//  Created by Ibrahim Tahirou on 11/2/15.
+//  Created by Ibrahim Tahirou on 11/11/15.
 //  Copyright © 2015 Ibrahim Tahirou. All rights reserved.
 //
 
 import UIKit
 
-class PostViewController: UIViewController, UITextFieldDelegate {
-    
-    @IBOutlet weak var titleLabel: UITextField!
-    @IBOutlet weak var typeLabel: UITextField!
-    @IBOutlet weak var locationLabel: UITextField!
-    @IBOutlet weak var addressLabel: UITextField!
+class WarningViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,20 +21,10 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    
-    
-    @IBAction func submitButtonAction(sender: AnyObject) {
+    @IBAction func cancelButtonAction(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true) { () -> Void in
+        }
     }
-    
-    
-    // MARK : - UITextFieldDelegate
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    
     
     /*
     // MARK: - Navigation

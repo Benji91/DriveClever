@@ -7,27 +7,27 @@
 //
 
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     
     @IBOutlet weak var settingsTable: UITableView!
     let textCellIdentifier = "TextCell"
     let tableData = ["Account", "Help", "Privacy", "About", "Logout"]
+    let tableIcon = ["account", "help", "privacy", "about", "logout"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
@@ -38,34 +38,34 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
         
         let row = indexPath.row
-        cell.textLabel?.text = tableData[row]
+        let label = self.view.viewWithTag(2) as? UILabel
+        label?.text = tableData[row]
+        let imgView = self.view.viewWithTag(1) as? UIImageView
+        imgView?.image = UIImage(named: tableIcon[row])
         
+        imgView!.backgroundColor = UIColor.whiteColor()
+        imgView!.layer.cornerRadius = 8
+        imgView!.layer.borderWidth = 2
+        imgView!.layer.borderColor = UIColor.whiteColor().CGColor
         return cell
-        
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let row = indexPath.row
-        if(tableData[row] == "Logout") {
-            let loginManager = FBSDKLoginManager()
-            loginManager.logOut()
-            self.performSegueWithIdentifier("logoutSegue", sender: self)
-
-        }
-        
         print(tableData[row])
         
     }
-
-
+    
+    
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
