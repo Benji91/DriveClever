@@ -20,7 +20,47 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Default.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "Default.png")!)
+        let isIphone = (UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Phone)
+        let isIphone5 = isIphone && (UIScreen.mainScreen().bounds.size.height>480) && (UIScreen.mainScreen().bounds.size.height<667)
+        let isIphone6 = isIphone && (UIScreen.mainScreen().bounds.size.height>568) && (UIScreen.mainScreen().bounds.size.height<736)
+        let isIphone6Plus = isIphone && (UIScreen.mainScreen().bounds.size.height>667)
+        var iphoneType = ""
+        
+        if(isIphone5){
+           iphoneType="home5"
+        }else{
+            if(isIphone6){
+                iphoneType="home6"
+            }else{
+                if(isIphone6Plus){
+                    iphoneType="home6Plus"
+                }else{
+                    iphoneType="home4"
+                }
+            }
+        }
+        
+        let bgImage = UIImageView(image: UIImage(named: iphoneType))
+        self.view.addSubview(bgImage)
+
+        let btnFBLogin = UIButton()
+       
+        btnFBLogin.frame = CGRectMake(100, 100, UIScreen.mainScreen().bounds.size.width*0.7
+            , 50)
+        btnFBLogin.center=self.view.center
+       
+        btnFBLogin.setImage(UIImage(named:"FBButtonSt"), forState: UIControlState.Normal)
+        btnFBLogin.setImage(UIImage(named:"FBButtonHover"), forState: UIControlState.Highlighted)
+        
+        btnFBLogin.addTarget(self, action: "loginWithFacebookButtonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+
+        
+        btnFBLogin.contentHorizontalAlignment=UIControlContentHorizontalAlignment.Fill
+        btnFBLogin.contentVerticalAlignment=UIControlContentVerticalAlignment.Fill
+        
+        self.view.addSubview(btnFBLogin)
+
         
         if(FBSDKAccessToken.currentAccessToken()==nil){
             print("Not logged in")
