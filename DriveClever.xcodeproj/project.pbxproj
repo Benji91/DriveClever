@@ -29,7 +29,6 @@
 		3F1FDCAD1BD3C72800899B24 /* DriveCleverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDCAC1BD3C72800899B24 /* DriveCleverUITests.swift */; };
 		3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */; };
 		3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */; };
-		3F80A83C1BF52A3600E575FD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F80A8391BF52A3600E575FD /* Default@2x.png */; };
 		3F80A83D1BF52A3600E575FD /* redPin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F80A83A1BF52A3600E575FD /* redPin@2x.png */; };
 		3F80A83E1BF52A3600E575FD /* warning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F80A83B1BF52A3600E575FD /* warning@2x.png */; };
 		3F80A8401BF52DBA00E575FD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F80A83F1BF52DBA00E575FD /* MainTabBarController.swift */; };
@@ -61,6 +60,13 @@
 		3FCD903A1BE7E4C70031D7EF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD90291BE7E4C70031D7EF /* LoginViewController.swift */; };
 		3FCD903C1BE7E4C70031D7EF /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD902B1BE7E4C70031D7EF /* PostViewController.swift */; };
 		3FCD903F1BE7E4C70031D7EF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCD902E1BE7E4C70031D7EF /* SettingsViewController.swift */; };
+		3FD323B91BF55F400041E2CF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD323B81BF55F400041E2CF /* MapKit.framework */; };
+		3FD323BB1BF564090041E2CF /* home4.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323BA1BF564090041E2CF /* home4.png */; };
+		3FD323C11BF565EA0041E2CF /* home6.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C01BF565EA0041E2CF /* home6.png */; };
+		3FD323C31BF566790041E2CF /* home6Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C21BF566790041E2CF /* home6Plus.png */; };
+		3FD323C51BF566C20041E2CF /* home5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C41BF566C20041E2CF /* home5.png */; };
+		3FD323C81BF56DB40041E2CF /* FBButtonHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C61BF56DB40041E2CF /* FBButtonHover.png */; };
+		3FD323C91BF56DB40041E2CF /* FBButtonSt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C71BF56DB40041E2CF /* FBButtonSt.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +128,6 @@
 		3F1FDCAE1BD3C72800899B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
-		3F80A8391BF52A3600E575FD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		3F80A83A1BF52A3600E575FD /* redPin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redPin@2x.png"; sourceTree = "<group>"; };
 		3F80A83B1BF52A3600E575FD /* warning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning@2x.png"; sourceTree = "<group>"; };
 		3F80A83F1BF52DBA00E575FD /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -155,6 +160,13 @@
 		3FCD90291BE7E4C70031D7EF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3FCD902B1BE7E4C70031D7EF /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		3FCD902E1BE7E4C70031D7EF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		3FD323B81BF55F400041E2CF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3FD323BA1BF564090041E2CF /* home4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home4.png; sourceTree = "<group>"; };
+		3FD323C01BF565EA0041E2CF /* home6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home6.png; sourceTree = "<group>"; };
+		3FD323C21BF566790041E2CF /* home6Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home6Plus.png; sourceTree = "<group>"; };
+		3FD323C41BF566C20041E2CF /* home5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home5.png; sourceTree = "<group>"; };
+		3FD323C61BF56DB40041E2CF /* FBButtonHover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBButtonHover.png; sourceTree = "<group>"; };
+		3FD323C71BF56DB40041E2CF /* FBButtonSt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBButtonSt.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +183,7 @@
 				3F92AC461BE28F550013F6F5 /* AWSSQS.framework in Frameworks */,
 				30A1A7981BE8EE5F008F878D /* AWSCore.framework in Frameworks */,
 				302519BD1BF533840082984A /* PubNub.framework in Frameworks */,
+				3FD323B91BF55F400041E2CF /* MapKit.framework in Frameworks */,
 				3F92AC431BE28F550013F6F5 /* AWSSES.framework in Frameworks */,
 				3F92AC401BE28F550013F6F5 /* AWSMachineLearning.framework in Frameworks */,
 				3F92AC481BE28F6A0013F6F5 /* AWSCognito.framework in Frameworks */,
@@ -213,6 +226,7 @@
 		3F1FDC801BD3C72800899B24 = {
 			isa = PBXGroup;
 			children = (
+				3FD323B81BF55F400041E2CF /* MapKit.framework */,
 				3F1FDC8B1BD3C72800899B24 /* DriveClever */,
 				3F1FDCA01BD3C72800899B24 /* DriveCleverTests */,
 				3F1FDCAB1BD3C72800899B24 /* DriveCleverUITests */,
@@ -348,7 +362,12 @@
 		3FFBE7F61BE7FA090048ED1E /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				3F80A8391BF52A3600E575FD /* Default@2x.png */,
+				3FD323C61BF56DB40041E2CF /* FBButtonHover.png */,
+				3FD323C71BF56DB40041E2CF /* FBButtonSt.png */,
+				3FD323BA1BF564090041E2CF /* home4.png */,
+				3FD323C41BF566C20041E2CF /* home5.png */,
+				3FD323C01BF565EA0041E2CF /* home6.png */,
+				3FD323C21BF566790041E2CF /* home6Plus.png */,
 				3F80A83A1BF52A3600E575FD /* redPin@2x.png */,
 				3F80A83B1BF52A3600E575FD /* warning@2x.png */,
 			);
@@ -424,6 +443,11 @@
 					3F1FDC881BD3C72800899B24 = {
 						CreatedOnToolsVersion = 7.0.1;
 						DevelopmentTeam = 3YU24VLKHN;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					3F1FDC9C1BD3C72800899B24 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -460,11 +484,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD323C81BF56DB40041E2CF /* FBButtonHover.png in Resources */,
 				3F80A83D1BF52A3600E575FD /* redPin@2x.png in Resources */,
+				3FD323C11BF565EA0041E2CF /* home6.png in Resources */,
 				3F80A83E1BF52A3600E575FD /* warning@2x.png in Resources */,
-				3F80A83C1BF52A3600E575FD /* Default@2x.png in Resources */,
+				3FD323C31BF566790041E2CF /* home6Plus.png in Resources */,
+				3FD323C91BF56DB40041E2CF /* FBButtonSt.png in Resources */,
+				3FD323BB1BF564090041E2CF /* home4.png in Resources */,
 				3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */,
 				3023DA7F1BD97E5E001D9D5A /* Wit.bundle in Resources */,
+				3FD323C51BF566C20041E2CF /* home5.png in Resources */,
 				3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
