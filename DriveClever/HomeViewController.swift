@@ -5,6 +5,7 @@
 //  Created by Ibrahim Tahirou on 10/25/15.
 //  Copyright © 2015 Ibrahim Tahirou. All rights reserved.
 //
+// modified by Benjamin JAHIC on 10/25/15.
 
 import UIKit
 import MapKit

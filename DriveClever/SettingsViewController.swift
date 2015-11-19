@@ -9,9 +9,10 @@
 import UIKit
 
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    
+   
+    @IBOutlet weak var settingsView: UIView!
     @IBOutlet weak var settingsTable: UITableView!
+    
     let textCellIdentifier = "TextCell"
     let tableData = ["Account", "Help", "Privacy", "About", "Logout"]
     let tableIcon = ["account", "help", "privacy", "about", "logout"]
@@ -19,15 +20,20 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
+                // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(animated: Bool) {
+    
+        //let screenHeight = UIScreen.mainScreen().bounds.height
+        let screenWidth = UIScreen.mainScreen().bounds.width
+        settingsView.frame = CGRectMake(0,20,screenWidth,settingsView.frame.height)
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
