@@ -67,6 +67,7 @@
 		3FD323C51BF566C20041E2CF /* home5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C41BF566C20041E2CF /* home5.png */; };
 		3FD323C81BF56DB40041E2CF /* FBButtonHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C61BF56DB40041E2CF /* FBButtonHover.png */; };
 		3FD323C91BF56DB40041E2CF /* FBButtonSt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C71BF56DB40041E2CF /* FBButtonSt.png */; };
+		3FFBC29D1BFE77D900C29601 /* microphone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFBC29C1BFE77D900C29601 /* microphone.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 		3FD323C41BF566C20041E2CF /* home5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home5.png; sourceTree = "<group>"; };
 		3FD323C61BF56DB40041E2CF /* FBButtonHover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBButtonHover.png; sourceTree = "<group>"; };
 		3FD323C71BF56DB40041E2CF /* FBButtonSt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBButtonSt.png; sourceTree = "<group>"; };
+		3FFBC29C1BFE77D900C29601 /* microphone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = microphone.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -364,6 +366,7 @@
 			children = (
 				3FD323C61BF56DB40041E2CF /* FBButtonHover.png */,
 				3FD323C71BF56DB40041E2CF /* FBButtonSt.png */,
+				3FFBC29C1BFE77D900C29601 /* microphone.jpg */,
 				3FD323BA1BF564090041E2CF /* home4.png */,
 				3FD323C41BF566C20041E2CF /* home5.png */,
 				3FD323C01BF565EA0041E2CF /* home6.png */,
@@ -489,6 +492,7 @@
 				3FD323C11BF565EA0041E2CF /* home6.png in Resources */,
 				3F80A83E1BF52A3600E575FD /* warning@2x.png in Resources */,
 				3FD323C31BF566790041E2CF /* home6Plus.png in Resources */,
+				3FFBC29D1BFE77D900C29601 /* microphone.jpg in Resources */,
 				3FD323C91BF56DB40041E2CF /* FBButtonSt.png in Resources */,
 				3FD323BB1BF564090041E2CF /* home4.png in Resources */,
 				3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */,

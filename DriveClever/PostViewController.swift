@@ -16,6 +16,49 @@ class PostViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var addressLabel: UITextField!
     
     override func viewDidLoad() {
+        let screenWidth = UIScreen.mainScreen().bounds.width
+        let screenHeight = UIScreen.mainScreen().bounds.height
+        self.view.backgroundColor = UIColor(red: 53/255, green: 166/255, blue: 165/255, alpha: 1)
+        
+        
+        
+        let header:UIView! = UIView()
+        header.frame = CGRectMake(0,0,screenWidth,screenHeight*0.1)
+        let headerColor = UIColor(red: 43/255, green: 134/255, blue: 133/255, alpha : 1)
+        header.backgroundColor = headerColor
+        self.view.addSubview(header)
+        
+        
+        let label:UILabel! = UILabel()
+        label.font = UIFont(descriptor: UIFontDescriptor(name: "Papyrus", size: 24), size: 24)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Post"
+        label.textColor = UIColor.blackColor()
+        label.frame = CGRectMake(0,15,screenWidth,screenHeight*0.1)
+        header.addSubview(label)
+        
+        
+        
+        
+        let textView:UITextView! = UITextView()
+        textView.frame = CGRectMake(0,header.frame.height,screenWidth,screenHeight*0.9)
+        textView.editable = false
+        self.view.addSubview(textView)
+        
+        
+        
+        let btnVoiceRecog = UIButton()
+        
+        btnVoiceRecog.frame = CGRectMake(100, 100, 100, 100)
+        btnVoiceRecog.center = CGPointMake(textView.center.x,screenHeight-200)
+
+        
+        btnVoiceRecog.setImage(UIImage(named:"microphone.jpg"), forState: UIControlState.Normal)
+        
+      
+        
+        textView.addSubview(btnVoiceRecog)
+        
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
