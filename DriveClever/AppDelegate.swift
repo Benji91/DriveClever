@@ -30,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
         super.init()
         client.addListener(self)
     }
+    
     func client(client: PubNub!, didReceiveMessage message: PNMessageResult!) {
         print(message)
     }
