@@ -12,6 +12,7 @@ let debug = 1
 class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var filterTable: UITableView!
+
     
     let textCellIdentifier = "TextCell"
     let tableData = ["All", "Construction", "Radar", "Accident", "Traffic", "Breakdown"]
@@ -22,6 +23,8 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // Do any additional setup after loading the view.
     }
+    
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
