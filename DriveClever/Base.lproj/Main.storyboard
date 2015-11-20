@@ -262,7 +262,7 @@
                         <outlet property="accidentBtn" destination="8vA-N9-c11" id="3nv-jK-Qqf"/>
                         <outlet property="breakDownBtn" destination="nMa-N0-TjA" id="TZS-S7-2Wf"/>
                         <outlet property="constructionBtn" destination="Fg7-d0-THQ" id="hFr-6b-4Q7"/>
-                        <outlet property="containerView" destination="Ylc-9Y-5nH" id="bqJ-50-ogc"/>
+                        <outlet property="containerView" destination="1Zu-0R-dxO" id="uiz-Da-WX9"/>
                         <outlet property="radarBtn" destination="K1I-VY-4Wu" id="MTe-cz-vEw"/>
                         <outlet property="trafficBtn" destination="CBI-zV-1d9" id="AJi-Fn-9B9"/>
                     </connections>
