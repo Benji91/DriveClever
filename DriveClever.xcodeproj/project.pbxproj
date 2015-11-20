@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3023DA7F1BD97E5E001D9D5A /* Wit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3023DA7D1BD97E5E001D9D5A /* Wit.bundle */; };
-		3023DA801BD97E5E001D9D5A /* Wit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3023DA7E1BD97E5E001D9D5A /* Wit.framework */; };
 		302519BB1BF533840082984A /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B71BF5335D0082984A /* CocoaLumberjack.framework */; };
 		302519BC1BF533840082984A /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B71BF5335D0082984A /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		302519BD1BF533840082984A /* PubNub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 302519B81BF5335D0082984A /* PubNub.framework */; };
@@ -29,6 +27,9 @@
 		3F1FDCAD1BD3C72800899B24 /* DriveCleverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDCAC1BD3C72800899B24 /* DriveCleverUITests.swift */; };
 		3F1FDCBC1BD3C94C00899B24 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */; };
 		3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */; };
+		3F3D2B891BFE949B005A7DAC /* Wit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F3D2B871BFE949B005A7DAC /* Wit.bundle */; };
+		3F3D2B8A1BFE949B005A7DAC /* Wit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3D2B881BFE949B005A7DAC /* Wit.framework */; };
+		3F3D2B8C1BFE9E7B005A7DAC /* SettingsDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3D2B8B1BFE9E7B005A7DAC /* SettingsDetailsViewController.swift */; };
 		3F80A83D1BF52A3600E575FD /* redPin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F80A83A1BF52A3600E575FD /* redPin@2x.png */; };
 		3F80A83E1BF52A3600E575FD /* warning@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F80A83B1BF52A3600E575FD /* warning@2x.png */; };
 		3F80A8401BF52DBA00E575FD /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F80A83F1BF52DBA00E575FD /* MainTabBarController.swift */; };
@@ -67,6 +68,7 @@
 		3FD323C51BF566C20041E2CF /* home5.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C41BF566C20041E2CF /* home5.png */; };
 		3FD323C81BF56DB40041E2CF /* FBButtonHover.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C61BF56DB40041E2CF /* FBButtonHover.png */; };
 		3FD323C91BF56DB40041E2CF /* FBButtonSt.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD323C71BF56DB40041E2CF /* FBButtonSt.png */; };
+		3FFBC29D1BFE77D900C29601 /* microphone.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3FFBC29C1BFE77D900C29601 /* microphone.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,8 +104,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3023DA7D1BD97E5E001D9D5A /* Wit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Wit.bundle; sourceTree = "<group>"; };
-		3023DA7E1BD97E5E001D9D5A /* Wit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wit.framework; sourceTree = "<group>"; };
 		302519B71BF5335D0082984A /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = "<group>"; };
 		302519B81BF5335D0082984A /* PubNub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PubNub.framework; sourceTree = "<group>"; };
 		308863D81BD97C4B000C73FE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -128,6 +128,9 @@
 		3F1FDCAE1BD3C72800899B24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F1FDCBA1BD3C94C00899B24 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		3F1FDCBB1BD3C94C00899B24 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		3F3D2B871BFE949B005A7DAC /* Wit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Wit.bundle; sourceTree = "<group>"; };
+		3F3D2B881BFE949B005A7DAC /* Wit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Wit.framework; sourceTree = "<group>"; };
+		3F3D2B8B1BFE9E7B005A7DAC /* SettingsDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsDetailsViewController.swift; sourceTree = "<group>"; };
 		3F80A83A1BF52A3600E575FD /* redPin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "redPin@2x.png"; sourceTree = "<group>"; };
 		3F80A83B1BF52A3600E575FD /* warning@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "warning@2x.png"; sourceTree = "<group>"; };
 		3F80A83F1BF52DBA00E575FD /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -167,6 +170,7 @@
 		3FD323C41BF566C20041E2CF /* home5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home5.png; sourceTree = "<group>"; };
 		3FD323C61BF56DB40041E2CF /* FBButtonHover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBButtonHover.png; sourceTree = "<group>"; };
 		3FD323C71BF56DB40041E2CF /* FBButtonSt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FBButtonSt.png; sourceTree = "<group>"; };
+		3FFBC29C1BFE77D900C29601 /* microphone.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = microphone.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +178,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */,
+				308863DF1BD97C76000C73FE /* CoreLocation.framework in Frameworks */,
 				308863DD1BD97C6B000C73FE /* SystemConfiguration.framework in Frameworks */,
+				308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */,
 				3F92AC4C1BE28FDE0013F6F5 /* libz.tbd in Frameworks */,
 				3F92AC4A1BE28FD30013F6F5 /* libsqlite3.tbd in Frameworks */,
 				3F92AC391BE28F550013F6F5 /* AWSCloudWatch.framework in Frameworks */,
@@ -187,18 +194,15 @@
 				3F92AC431BE28F550013F6F5 /* AWSSES.framework in Frameworks */,
 				3F92AC401BE28F550013F6F5 /* AWSMachineLearning.framework in Frameworks */,
 				3F92AC481BE28F6A0013F6F5 /* AWSCognito.framework in Frameworks */,
-				308863DF1BD97C76000C73FE /* CoreLocation.framework in Frameworks */,
 				3F92AC371BE28F550013F6F5 /* AWSAPIGateway.framework in Frameworks */,
 				3F92AC381BE28F550013F6F5 /* AWSAutoScaling.framework in Frameworks */,
-				308863DB1BD97C5F000C73FE /* MobileCoreServices.framework in Frameworks */,
 				302519BB1BF533840082984A /* CocoaLumberjack.framework in Frameworks */,
-				308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */,
 				3F92AC3E1BE28F550013F6F5 /* AWSKinesis.framework in Frameworks */,
 				3F92AC3C1BE28F550013F6F5 /* AWSEC2.framework in Frameworks */,
-				3023DA801BD97E5E001D9D5A /* Wit.framework in Frameworks */,
 				3F92AC3F1BE28F550013F6F5 /* AWSLambda.framework in Frameworks */,
 				3F92AC421BE28F550013F6F5 /* AWSS3.framework in Frameworks */,
 				3F92AC451BE28F550013F6F5 /* AWSSNS.framework in Frameworks */,
+				3F3D2B8A1BFE949B005A7DAC /* Wit.framework in Frameworks */,
 				3F1FDCBD1BD3C94C00899B24 /* FBSDKLoginKit.framework in Frameworks */,
 				3F92AC3B1BE28F550013F6F5 /* AWSDynamoDB.framework in Frameworks */,
 				3F92AC3D1BE28F550013F6F5 /* AWSElasticLoadBalancing.framework in Frameworks */,
@@ -259,8 +263,6 @@
 				3F92AC491BE28FD30013F6F5 /* libsqlite3.tbd */,
 				3F1FDC931BD3C72800899B24 /* Assets.xcassets */,
 				3F92AC581BE2D71F0013F6F5 /* Frameworks */,
-				3023DA7D1BD97E5E001D9D5A /* Wit.bundle */,
-				3023DA7E1BD97E5E001D9D5A /* Wit.framework */,
 			);
 			path = DriveClever;
 			sourceTree = "<group>";
@@ -316,6 +318,8 @@
 		3F92AC581BE2D71F0013F6F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F3D2B871BFE949B005A7DAC /* Wit.bundle */,
+				3F3D2B881BFE949B005A7DAC /* Wit.framework */,
 				302519B71BF5335D0082984A /* CocoaLumberjack.framework */,
 				302519B81BF5335D0082984A /* PubNub.framework */,
 				30A1A7971BE8EE5F008F878D /* AWSCore.framework */,
@@ -355,6 +359,7 @@
 				3FCD902E1BE7E4C70031D7EF /* SettingsViewController.swift */,
 				3F80A83F1BF52DBA00E575FD /* MainTabBarController.swift */,
 				3F80A8411BF52DD700E575FD /* WarningViewController.swift */,
+				3F3D2B8B1BFE9E7B005A7DAC /* SettingsDetailsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 			children = (
 				3FD323C61BF56DB40041E2CF /* FBButtonHover.png */,
 				3FD323C71BF56DB40041E2CF /* FBButtonSt.png */,
+				3FFBC29C1BFE77D900C29601 /* microphone.jpg */,
 				3FD323BA1BF564090041E2CF /* home4.png */,
 				3FD323C41BF566C20041E2CF /* home5.png */,
 				3FD323C01BF565EA0041E2CF /* home6.png */,
@@ -486,13 +492,14 @@
 			files = (
 				3FD323C81BF56DB40041E2CF /* FBButtonHover.png in Resources */,
 				3F80A83D1BF52A3600E575FD /* redPin@2x.png in Resources */,
+				3F3D2B891BFE949B005A7DAC /* Wit.bundle in Resources */,
 				3FD323C11BF565EA0041E2CF /* home6.png in Resources */,
 				3F80A83E1BF52A3600E575FD /* warning@2x.png in Resources */,
 				3FD323C31BF566790041E2CF /* home6Plus.png in Resources */,
+				3FFBC29D1BFE77D900C29601 /* microphone.jpg in Resources */,
 				3FD323C91BF56DB40041E2CF /* FBButtonSt.png in Resources */,
 				3FD323BB1BF564090041E2CF /* home4.png in Resources */,
 				3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */,
-				3023DA7F1BD97E5E001D9D5A /* Wit.bundle in Resources */,
 				3FD323C51BF566C20041E2CF /* home5.png in Resources */,
 				3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */,
 			);
@@ -535,6 +542,7 @@
 				3FCD90391BE7E4C70031D7EF /* HomeViewController.swift in Sources */,
 				3F92AC571BE2D6C90013F6F5 /* Constants.swift in Sources */,
 				30A348131BEBE85B0071787C /* AreaRequest .swift in Sources */,
+				3F3D2B8C1BFE9E7B005A7DAC /* SettingsDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -667,17 +675,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DriveClever",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DriveClever/Wit.bundle",
 				);
 				INFOPLIST_FILE = DriveClever/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveClever;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "DriveClever/DriveClever-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = DriveClever/;
@@ -689,17 +700,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/DriveClever",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/DriveClever/Wit.bundle",
 				);
 				INFOPLIST_FILE = DriveClever/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = lu.uni.DriveClever;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_DISABLE_SAFETY_CHECKS = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = "DriveClever/DriveClever-Bridging-Header.h";
 				USER_HEADER_SEARCH_PATHS = DriveClever/;

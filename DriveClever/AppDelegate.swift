@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import AVFoundation
 
 
 
@@ -37,6 +38,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     
     func application(application: UIApplication,didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        do{
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord)
+        }
+        catch{
+            print("Wit - Error in AVAudioCategoryPlayAndRecord")
+        }
+        do{
+            try AVAudioSession.sharedInstance().setActive(true)
+        }
+        catch{
+            print("Wit - Error in setActive AVAudioSession")
+        }
+        
+        Wit.sharedInstance().accessToken = "ZMRSX7D6C4I5CVSFGJT4QQWJRZVZEXJ5"
+        Wit.sharedInstance().detectSpeechStop = WITVadConfig.DetectSpeechStop
+
+        // Override point for customization after application launch.
+        
         AWSLogger.defaultLogger().logLevel = AWSLogLevel.Verbose
         let result = FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         return result

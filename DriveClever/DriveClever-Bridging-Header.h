@@ -17,6 +17,7 @@
 #import <AWSLambda/AWSLambda.h>
 #import <AWSDynamoDB/AWSDynamoDB.h>
 #import <PubNub/PubNub.h>
+#import <Wit/Wit.h>
 
 
 

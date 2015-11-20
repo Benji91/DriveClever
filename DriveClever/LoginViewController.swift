@@ -46,8 +46,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
 
         let btnFBLogin = UIButton()
        
-        btnFBLogin.frame = CGRectMake(100, 100, UIScreen.mainScreen().bounds.size.width*0.7
-            , 50)
+        btnFBLogin.frame = CGRectMake(100, 100, UIScreen.mainScreen().bounds.size.width*0.7, 50)
         btnFBLogin.center=self.view.center
        
         btnFBLogin.setImage(UIImage(named:"FBButtonSt"), forState: UIControlState.Normal)

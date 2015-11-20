@@ -4,7 +4,7 @@
 //
 //  Created by Ibrahim Tahirou on 11/2/15.
 //  Copyright © 2015 Ibrahim Tahirou. All rights reserved.
-//
+
 
 import UIKit
 let debug = 1
@@ -12,7 +12,6 @@ let debug = 1
 class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var filterTable: UITableView!
-
     
     let textCellIdentifier = "TextCell"
     let tableData = ["All", "Construction", "Radar", "Accident", "Traffic", "Breakdown"]
@@ -23,8 +22,6 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         // Do any additional setup after loading the view.
     }
-    
-
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,6 +37,7 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
         
         let row = indexPath.row
         let label = self.view.viewWithTag(2) as? UILabel
@@ -48,29 +46,50 @@ class FilterViewController: UIViewController, UITableViewDelegate, UITableViewDa
         imgView?.image = UIImage(named: tableIcon[row])
         
         imgView!.backgroundColor = UIColor.whiteColor()
-        imgView!.layer.cornerRadius = 8
-        imgView!.layer.borderWidth = 2
-        imgView!.layer.borderColor = UIColor.whiteColor().CGColor
+        imgView!.layer.cornerRadius = (imgView?.frame.size.width)!/2
+        imgView!.layer.borderWidth = 3
+        let color = UIColor(red: 0.239, green: 0.800, blue: 0.643, alpha: 1.0)
+        imgView!.layer.borderColor = color.CGColor
         return cell
         
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let row = indexPath.row
-        print(tableData[row])
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
+        if(indexPath.row == 0){
+            let cell = tableView.visibleCells[0]
+            for(var i = 1; i < tableData.count ; i++){
+                let otherCell = tableView.visibleCells[i]
+                if (cell.accessoryType == UITableViewCellAccessoryType.None){
+                    otherCell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                    if i == tableData.count-1 {
+                        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                    }
+                }
+                else {
+                    otherCell.accessoryType = UITableViewCellAccessoryType.None
+                    if i == tableData.count-1 {
+                        cell.accessoryType = UITableViewCellAccessoryType.None
+                    }
+                    
+                }
+            }
+        }
+        else {
+            let index = tableView.indexPathsForVisibleRows?.indexOf(indexPath)
+            if (index != NSNotFound) {
+                let cell = tableView.visibleCells[indexPath.row]
+                if (cell.accessoryType == UITableViewCellAccessoryType.None){
+                    cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+                }
+                else {
+                    cell.accessoryType = UITableViewCellAccessoryType.None
+                }
+            }
+        }
+        filterTable.reloadData()
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }
