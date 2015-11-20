@@ -7,13 +7,10 @@
 //
 
 import UIKit
+import AVFoundation
 
-class PostViewController: UIViewController, UITextFieldDelegate {
+class PostViewController: UIViewController, UITextFieldDelegate{
     
-    @IBOutlet weak var titleLabel: UITextField!
-    @IBOutlet weak var typeLabel: UITextField!
-    @IBOutlet weak var locationLabel: UITextField!
-    @IBOutlet weak var addressLabel: UITextField!
     
     override func viewDidLoad() {
         let screenWidth = UIScreen.mainScreen().bounds.width
@@ -47,14 +44,30 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         
         
         
-        let btnVoiceRecog = UIButton()
+        //WIT IMPLEMENTATION
+        
+      
+        
+        /*
+        Wit.sharedInstance().delegate = self
+
+        // create the label
+        labelView = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, screen.size.width, 50)];
+        labelView.textAlignment = NSTextAlignmentCenter;
+        [self.view addSubview:labelView];*/
+        
+        
+        
+        
+        let btnVoiceRecog = WITMicButton()
         
         btnVoiceRecog.frame = CGRectMake(100, 100, 100, 100)
         btnVoiceRecog.center = CGPointMake(textView.center.x,screenHeight-200)
 
         
-        btnVoiceRecog.setImage(UIImage(named:"microphone.jpg"), forState: UIControlState.Normal)
-        
+        //btnVoiceRecog.setImage(UIImage(named:"microphone.jpg"), forState: UIControlState.Normal)
+        //btnVoiceRecog.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
+
       
         
         textView.addSubview(btnVoiceRecog)
@@ -71,8 +84,6 @@ class PostViewController: UIViewController, UITextFieldDelegate {
     
     
     
-    @IBAction func submitButtonAction(sender: AnyObject) {
-    }
     
     
     // MARK : - UITextFieldDelegate
@@ -82,6 +93,14 @@ class PostViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func buttonAction(sender:UIButton!){
+        let utterance = AVSpeechUtterance(string: "Hello world")
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        utterance.rate = 0.1
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speakUtterance(utterance)
+    }
     
     
     /*

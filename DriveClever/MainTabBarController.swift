@@ -6,6 +6,8 @@
 //  Copyright © 2015 Ibrahim Tahirou. All rights reserved.
 //
 
+
+
 import UIKit
 
 class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
@@ -13,31 +15,27 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     
+    
     func tabBarController(tabBarController: UITabBarController, shouldSelectViewController viewController: UIViewController) -> Bool {
+        tabBarController.selectedIndex = 0
         
         var result:Bool = true
         
         if viewController.isKindOfClass(WarningViewController){
             result = false
-            
-            print("@___________________WarningViewController")
             let vc = self.storyboard?.instantiateViewControllerWithIdentifier("warningView") as! WarningViewController
-            vc.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
+            vc.modalPresentationStyle = UIModalPresentationStyle.OverCurrentContext
+            
             self.presentViewController(vc, animated: true, completion: { () -> Void in
-                
-                self.presentedViewController?.modalPresentationStyle = UIModalPresentationStyle.CurrentContext
-                
             })
+            
         }
         
         return result
@@ -56,3 +54,4 @@ class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
     */
     
 }
+

@@ -156,101 +156,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YTu-7G-wmi">
-                                <rect key="frame" x="20" y="86" width="280" height="355"/>
+                            <view alpha="0.75" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Zu-0R-dxO">
+                                <rect key="frame" x="20" y="71" width="280" height="355"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJt-Ix-lfa">
-                                        <rect key="frame" x="49" y="86" width="64" height="64"/>
+                                    <button opaque="NO" tag="101" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-N0-TjA">
+                                        <rect key="frame" x="108" y="66" width="64" height="64"/>
                                         <animations/>
-                                        <state key="normal" image="all_icon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMT-7v-H2J">
-                                        <rect key="frame" x="172" y="86" width="64" height="64"/>
-                                        <animations/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="breakdown_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ZB-RP-yI7">
-                                        <rect key="frame" x="173" y="120" width="63" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KjY-L5-s2x">
+                                        <rect key="frame" x="108" y="123" width="63" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Breakdown"/>
+                                        <state key="normal" title="Breakdown">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BhD-EG-AuY">
-                                        <rect key="frame" x="49" y="179" width="64" height="64"/>
+                                    <button opaque="NO" tag="102" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K1I-VY-4Wu">
+                                        <rect key="frame" x="31" y="151" width="64" height="64"/>
                                         <animations/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="radar_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOz-ga-1rz">
-                                        <rect key="frame" x="64" y="213" width="34" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBE-eW-iow">
+                                        <rect key="frame" x="46" y="213" width="34" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Radar"/>
+                                        <state key="normal" title="Radar">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IwN-Zm-bKY">
-                                        <rect key="frame" x="172" y="179" width="64" height="64"/>
+                                    <button opaque="NO" tag="103" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CBI-zV-1d9">
+                                        <rect key="frame" x="179" y="151" width="64" height="64"/>
                                         <animations/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="traffics_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMq-My-Ccn">
-                                        <rect key="frame" x="185" y="213" width="37" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLS-Bh-Nk1">
+                                        <rect key="frame" x="193" y="213" width="37" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Traffic"/>
+                                        <state key="normal" title="Traffic">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTQ-HU-NF3">
-                                        <rect key="frame" x="49" y="273" width="64" height="64"/>
+                                    <button opaque="NO" tag="104" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fg7-d0-THQ">
+                                        <rect key="frame" x="31" y="251" width="64" height="64"/>
                                         <animations/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal" image="construction_icon"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chP-If-qYN">
-                                        <rect key="frame" x="44" y="307" width="74" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QyW-XJ-yat">
+                                        <rect key="frame" x="26" y="310" width="74" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Construction"/>
+                                        <state key="normal" title="Construction">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tkk-dZ-lH9">
-                                        <rect key="frame" x="171" y="273" width="64" height="64"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ylc-9Y-5nH">
+                                        <rect key="frame" x="230" y="0.0" width="50" height="50"/>
                                         <animations/>
-                                        <state key="normal" image="accident_icon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Kr-bz-Kxv">
-                                        <rect key="frame" x="66" y="120" width="30" height="30"/>
-                                        <animations/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="All"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xuu-pe-dqm">
-                                        <rect key="frame" x="249" y="-20" width="50" height="50"/>
-                                        <animations/>
-                                        <state key="normal" image="cross_btn">
+                                        <state key="normal" image="cross">
                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <connections>
-                                            <action selector="cancelButtonAction:" destination="OfR-0v-nxc" eventType="touchUpInside" id="mpH-DC-J6c"/>
-                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Incident !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRx-7S-Z4K">
-                                        <rect key="frame" x="14" y="38" width="252" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Post Incident !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1n-2L-jk3">
+                                        <rect key="frame" x="14" y="32" width="252" height="21"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRA-Yc-IbB">
-                                        <rect key="frame" x="179" y="307" width="50" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcH-zd-MJ1">
+                                        <rect key="frame" x="187" y="310" width="50" height="30"/>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <state key="normal" title="Accident"/>
+                                        <state key="normal" title="Accident">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" tag="105" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8vA-N9-c11">
+                                        <rect key="frame" x="179" y="251" width="64" height="64"/>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.25098039220000001" green="0.80000000000000004" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="accident_icon"/>
                                     </button>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <animations/>
@@ -258,6 +258,14 @@
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Warning" image="warning" id="ICe-FC-GwN"/>
+                    <connections>
+                        <outlet property="accidentBtn" destination="8vA-N9-c11" id="3nv-jK-Qqf"/>
+                        <outlet property="breakDownBtn" destination="nMa-N0-TjA" id="TZS-S7-2Wf"/>
+                        <outlet property="constructionBtn" destination="Fg7-d0-THQ" id="hFr-6b-4Q7"/>
+                        <outlet property="containerView" destination="Ylc-9Y-5nH" id="bqJ-50-ogc"/>
+                        <outlet property="radarBtn" destination="K1I-VY-4Wu" id="MTe-cz-vEw"/>
+                        <outlet property="trafficBtn" destination="CBI-zV-1d9" id="AJi-Fn-9B9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lUw-Db-AJq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,7 +384,6 @@
                     <tabBarItem key="tabBarItem" title="Setting" image="setting" id="zSu-0g-UFZ"/>
                     <connections>
                         <outlet property="settingsTable" destination="8b8-Li-CkE" id="vFf-FV-aJj"/>
-                        <outlet property="settingsView" destination="ctr-QP-SqN" id="hJt-AN-8gf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="42e-nC-bBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -402,13 +409,67 @@
             </objects>
             <point key="canvasLocation" x="303.75" y="366.54929577464787"/>
         </scene>
+        <!--Settings Details View Controller-->
+        <scene sceneID="aVH-Nj-C7Q">
+            <objects>
+                <viewController storyboardIdentifier="settingDetailsView" id="CQX-yD-RBQ" customClass="SettingsDetailsViewController" customModule="DriveClever" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bhj-eG-6aq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pae-Oh-PED"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jEK-x1-0Ob">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KD4-Ja-Xth">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mco-VP-C40">
+                                        <rect key="frame" x="60" y="25" width="201" height="21"/>
+                                        <animations/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ozj-bT-y08">
+                                        <rect key="frame" x="264" y="20" width="48" height="30"/>
+                                        <animations/>
+                                        <state key="normal" title="Cancel"/>
+                                        <connections>
+                                            <action selector="cancelButtonAction:" destination="CQX-yD-RBQ" eventType="touchUpInside" id="FDA-P5-jUn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <animations/>
+                                <color key="backgroundColor" red="0.29411764709999999" green="0.27058823529999998" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UA6-4J-2be">
+                                <rect key="frame" x="0.0" y="65" width="600" height="506"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CQX-yD-RBQ" id="fO6-4f-VSh"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="myWebView" destination="UA6-4J-2be" id="54V-wD-dMc"/>
+                        <outlet property="titleLbl" destination="mco-VP-C40" id="WbL-tn-K16"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RCn-Um-Und" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3795" y="484"/>
+        </scene>
     </scenes>
     <resources>
         <image name="accident_icon" width="30" height="30"/>
-        <image name="all_icon" width="30" height="30"/>
         <image name="breakdown_icon" width="30" height="30"/>
         <image name="construction_icon" width="30" height="30"/>
-        <image name="cross_btn" width="32" height="32"/>
+        <image name="cross" width="24" height="24"/>
         <image name="homei" width="22" height="22"/>
         <image name="nearby_icon" width="20" height="20"/>
         <image name="posts" width="22" height="22"/>
