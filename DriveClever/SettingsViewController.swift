@@ -7,13 +7,14 @@
 //
 
 import UIKit
+import MessageUI
 
-class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate {
     
     
     @IBOutlet weak var settingsTable: UITableView!
     let textCellIdentifier = "TextCell"
-    let tableData = ["Account", "Help", "Privacy", "About", "Logout"]
+    let tableData = ["Delete Account", "Help", "Privacy", "About", "Logout"]
     let tableIcon = ["account", "help", "privacy", "about", "logout"]
     
     
@@ -56,9 +57,18 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
             self.createAlert("Delete Account!", message: "Do you really want to delete your account?")
             
         }
-        else if(indexPath.row == 2){
-            //            self.createAlert("Logout", message: "Do you really want to logout?")
-            self.showActionSheet(tableData[indexPath.row])
+        else if(indexPath.row == 1){
+            // HELP PRESSED
+            print("Help.")
+            let mailComposeViewController = configuredMailComposeViewController()
+            if MFMailComposeViewController.canSendMail(){
+                self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+                
+            }
+            else {
+            self.showSendMailErrorAlert()
+            }
+            
             
         }
         else if(indexPath.row == 4){
@@ -95,6 +105,30 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         self.presentViewController(alertController, animated: true, completion: nil)
     }
     
+    func showSendMailErrorAlert() {
+        let sendMailErrorAlert = UIAlertView(title: "Mail couldn't be send.", message: "You'r device was unable to send this e-mail. Please try again.", delegate:self, cancelButtonTitle:"OK")
+        sendMailErrorAlert.show()
+        
+    }
+    
+    func configuredMailComposeViewController() -> MFMailComposeViewController{
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate=self
+        mailComposerVC.setToRecipients(["info@drive-clever.lu"])
+        mailComposerVC.setSubject("User - Help")
+        mailComposerVC.setMessageBody("", isHTML:false)
+        return mailComposerVC
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        
+        switch result {
+        case MFMailComposeResultCancelled: print("Mail canceled.")
+        case MFMailComposeResultSent: print("Mail sent.")
+        default: break
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     
     func showActionSheet(type: String) {
         var btnTitle_1:String?

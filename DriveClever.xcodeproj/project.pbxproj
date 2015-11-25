@@ -20,6 +20,7 @@
 		30A348111BEBE81E0071787C /* SituationUpdateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A348101BEBE81E0071787C /* SituationUpdateRequest.swift */; };
 		30A348131BEBE85B0071787C /* AreaRequest .swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A348121BEBE85B0071787C /* AreaRequest .swift */; };
 		30A348151BEBE8940071787C /* AreaResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A348141BEBE8940071787C /* AreaResponse.swift */; };
+		30A77B371C064F570098EAD9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A77B361C064F570098EAD9 /* MessageUI.framework */; };
 		3F1FDC8D1BD3C72800899B24 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */; };
 		3F1FDC921BD3C72800899B24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC901BD3C72800899B24 /* Main.storyboard */; };
 		3F1FDC941BD3C72800899B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F1FDC931BD3C72800899B24 /* Assets.xcassets */; };
@@ -115,6 +116,7 @@
 		30A348101BEBE81E0071787C /* SituationUpdateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SituationUpdateRequest.swift; sourceTree = "<group>"; };
 		30A348121BEBE85B0071787C /* AreaRequest .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AreaRequest .swift"; sourceTree = "<group>"; };
 		30A348141BEBE8940071787C /* AreaResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaResponse.swift; sourceTree = "<group>"; };
+		30A77B361C064F570098EAD9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3F1FDC891BD3C72800899B24 /* DriveClever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DriveClever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F1FDC8C1BD3C72800899B24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F1FDC911BD3C72800899B24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30A77B371C064F570098EAD9 /* MessageUI.framework in Frameworks */,
 				308863D91BD97C4B000C73FE /* AVFoundation.framework in Frameworks */,
 				308863DF1BD97C76000C73FE /* CoreLocation.framework in Frameworks */,
 				308863DD1BD97C6B000C73FE /* SystemConfiguration.framework in Frameworks */,
@@ -230,6 +233,7 @@
 		3F1FDC801BD3C72800899B24 = {
 			isa = PBXGroup;
 			children = (
+				30A77B361C064F570098EAD9 /* MessageUI.framework */,
 				3FD323B81BF55F400041E2CF /* MapKit.framework */,
 				3F1FDC8B1BD3C72800899B24 /* DriveClever */,
 				3F1FDCA01BD3C72800899B24 /* DriveCleverTests */,
