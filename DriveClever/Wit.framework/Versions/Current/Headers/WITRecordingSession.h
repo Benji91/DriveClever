@@ -14,6 +14,7 @@
 
 @protocol WITRecordingSessionDelegate;
 
+
 @interface WITRecordingSession : NSObject <WITRecorderDelegate, WITUploaderDelegate>
 
 @property WITRecorder *recorder;
@@ -38,7 +39,6 @@
 -(void)recordingSessionActivityDetectorStarted;
 -(void)recordingSessionDidStartRecording;
 -(void)recordingSessionDidStopRecording;
--(void)recordingSessionDidDetectSpeech;
 -(void)recordingSessionRecorderGotChunk:(NSData*)chunk;
 -(void)recordingSessionGotResponse:(NSDictionary*)resp customData:(id)customData error:(NSError*)err;
 

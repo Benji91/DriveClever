@@ -9,9 +9,10 @@
 import UIKit
 import AVFoundation
 
-class PostViewController: UIViewController, UITextFieldDelegate{
+class PostViewController: UIViewController, UITextFieldDelegate,WitDelegate{
     
-    
+    let textView:UITextView! = UITextView()
+
     override func viewDidLoad() {
         let screenWidth = UIScreen.mainScreen().bounds.width
         let screenHeight = UIScreen.mainScreen().bounds.height
@@ -35,40 +36,19 @@ class PostViewController: UIViewController, UITextFieldDelegate{
         header.addSubview(label)
         
         
-        
-        
-        let textView:UITextView! = UITextView()
         textView.frame = CGRectMake(0,header.frame.height,screenWidth,screenHeight*0.9)
         textView.editable = false
         self.view.addSubview(textView)
         
         
-        
-        //WIT IMPLEMENTATION
-        
-      
-        
-        /*
+     
         Wit.sharedInstance().delegate = self
 
-        // create the label
-        labelView = [[UILabel alloc] initWithFrame:CGRectMake(0, 200, screen.size.width, 50)];
-        labelView.textAlignment = NSTextAlignmentCenter;
-        [self.view addSubview:labelView];*/
-        
-        
-        
-        
         let btnVoiceRecog = WITMicButton()
         
         btnVoiceRecog.frame = CGRectMake(100, 100, 100, 100)
         btnVoiceRecog.center = CGPointMake(textView.center.x,screenHeight-200)
 
-        
-        //btnVoiceRecog.setImage(UIImage(named:"microphone.jpg"), forState: UIControlState.Normal)
-        //btnVoiceRecog.addTarget(self, action: "buttonAction:", forControlEvents: UIControlEvents.TouchUpInside)
-
-      
         
         textView.addSubview(btnVoiceRecog)
         
@@ -83,7 +63,21 @@ class PostViewController: UIViewController, UITextFieldDelegate{
     }
     
     
-    
+    func witDidGraspIntent(outcomes: [AnyObject]!, messageId: String!, customData: AnyObject!, error e: NSError!) {
+        if ((e) != nil) {
+            print("\(e.localizedDescription)")
+            return
+        }
+        
+        let outcomes : NSArray = outcomes!
+        let firstOutcome : NSDictionary = outcomes.objectAtIndex(0) as! NSDictionary
+        let intent : String = firstOutcome.objectForKey("intent")as! String
+        textView.text = intent
+        
+        //labelView!.text = intent
+        //labelView!.sizeToFit()
+    }
+
     
     
     // MARK : - UITextFieldDelegate
@@ -92,25 +86,5 @@ class PostViewController: UIViewController, UITextFieldDelegate{
         textField.resignFirstResponder()
         return true
     }
-    
-    func buttonAction(sender:UIButton!){
-        let utterance = AVSpeechUtterance(string: "Hello world")
-        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-        utterance.rate = 0.1
-        
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speakUtterance(utterance)
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
+       
 }
