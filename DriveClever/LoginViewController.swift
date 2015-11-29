@@ -70,12 +70,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             self.performSegueWithIdentifier("loginTabSegue", sender: self)
             
         }
-        //This portion will be used for FB Default Button//
-        /*loginButton = FBSDKLoginButton()
-        loginButton.readPermissions=["public_profile","email","user_friends"]
-        loginButton.center=self.view.center
-        loginButton.delegate = self
-        self.view.addSubview(loginButton)*/
+
         
         
     }
@@ -88,11 +83,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     
     @IBAction func loginWithFacebookButtonAction(sender: AnyObject) {
-        //This portion will be used for FB Default Button//
-        /*loginButton = FBSDKLoginButton()
-        loginButton.readPermissions=["public_profile","email","user_friends"]
-        loginButton.center=self.view.center
-        loginButton.delegate = self*/
         
         let login = FBSDKLoginManager.init()
         login.logInWithReadPermissions(["public_profile"], fromViewController: self) { (FBSDKLoginManagerLoginResult result, NSError error) -> Void in

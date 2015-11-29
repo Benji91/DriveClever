@@ -12,13 +12,41 @@ import MessageUI
 class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate {
     
     
-    @IBOutlet weak var settingsTable: UITableView!
+    let settingsTable:UITableView! = UITableView()
     let textCellIdentifier = "TextCell"
     let tableData = ["Delete Account", "Help", "Privacy", "About", "Logout"]
     let tableIcon = ["account", "help", "privacy", "about", "logout"]
     
     
     override func viewDidLoad() {
+        let screenWidth = UIScreen.mainScreen().bounds.width
+        let screenHeight = UIScreen.mainScreen().bounds.height
+        self.view.backgroundColor = UIColor(red: 53/255, green: 166/255, blue: 165/255, alpha: 1)
+        
+        let header:UIView! = UIView()
+        header.frame = CGRectMake(0,0,screenWidth,screenHeight*0.1)
+        let headerColor = UIColor(red: 43/255, green: 134/255, blue: 133/255, alpha : 1)
+        header.backgroundColor = headerColor
+        self.view.addSubview(header)
+        
+        let label:UILabel! = UILabel()
+        label.font = UIFont(descriptor: UIFontDescriptor(name: "Papyrus", size: 24), size: 24)
+        label.textAlignment = NSTextAlignment.Center
+        label.text = "Settings"
+        label.textColor = UIColor.blackColor()
+        label.frame = CGRectMake(0,15,screenWidth,screenHeight*0.1)
+        header.addSubview(label)
+        
+        
+        settingsTable.frame = CGRectMake(0,header.frame.height,screenWidth,screenHeight*0.9)
+        settingsTable.backgroundColor = UIColor(red: 53/255, green: 166/255, blue: 165/255, alpha: 1)
+        settingsTable.delegate = self
+        settingsTable.dataSource = self
+        settingsTable.registerClass(UITableViewCell.self, forCellReuseIdentifier: "TextCell")
+        settingsTable.separatorStyle = UITableViewCellSeparatorStyle.None
+        
+        self.view.addSubview(settingsTable)
+
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -30,7 +58,40 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tableData.count
+    }
+    
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(textCellIdentifier, forIndexPath: indexPath) as UITableViewCell
+        cell.selectionStyle = UITableViewCellSelectionStyle.Default
+        cell.backgroundColor = UIColor(red: 53/255, green: 166/255, blue: 165/255, alpha: 1)
+        let row = indexPath.row
+        
+        cell.frame.size=CGSizeMake(UIScreen.mainScreen().bounds.width,60)
+        cell.textLabel!.text=tableData[row]
+        cell.textLabel?.font = UIFont(descriptor: UIFontDescriptor(name: "Papyrus", size: 18), size: 18)
+        
+        let imgView = cell.imageView
+        let color = UIColor.blackColor()
+        imgView!.layer.borderColor = color.CGColor
+        imgView!.frame.size = CGSizeMake(60,60)
+        imgView!.layer.cornerRadius  = 3
+        imgView!.layer.borderWidth = 1
+        imgView!.layer.backgroundColor = UIColor.whiteColor().CGColor
+        
+        let imageName = UIImage(named: tableIcon[indexPath.row])
+        imgView!.image = imageName
+        
+        return cell
+        
+    }
+
+    
+    /*func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableData.count
     }
     
@@ -49,7 +110,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         imgView!.layer.borderWidth = 2
         imgView!.layer.borderColor = UIColor.whiteColor().CGColor
         return cell
-    }
+    }*/
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
@@ -66,7 +127,7 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
                 
             }
             else {
-            self.showSendMailErrorAlert()
+                self.showSendMailErrorAlert()
             }
             
             
@@ -165,17 +226,5 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.presentViewController(optionMenu, animated: true, completion: nil)
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
     
 }
