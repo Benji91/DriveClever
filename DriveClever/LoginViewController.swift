@@ -66,7 +66,10 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         }else{
             print("Logged in")
             APIAccess.connectToAmazonWebServices()
-            APIAccess.testAPI()
+            //APIAccess.testAPI()
+            APIAccess.requestSituations(AreaRequest(lat: 49.626082, lng:6.159284,radius: 1000.0))
+            //APIAccess.requestArea(AreaRequest(lat: 49.626082, lng:6.159284,radius: 1.0))
+
             self.performSegueWithIdentifier("loginTabSegue", sender: self)
             
         }

@@ -119,7 +119,7 @@ class APIAccess{
         let lambdaInvoker = AWSLambdaInvoker.defaultLambdaInvoker()
         
         /*New task to call the testAPI function (the function call)*/
-        let task = lambdaInvoker.invokeFunction("testAPI",JSONObject: [])
+        let task = lambdaInvoker.invokeFunction("requestSituations",JSONObject: ["lat":req.lat,"lng":req.lng,"radius":req.radius])
         
         /*Handling the result optained of the function call*/
         task.continueWithBlock(
