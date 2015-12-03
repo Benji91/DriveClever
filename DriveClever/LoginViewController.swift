@@ -48,7 +48,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
        
         btnFBLogin.frame = CGRectMake(100, 100, UIScreen.mainScreen().bounds.size.width*0.7, 50)
         btnFBLogin.center=self.view.center
-       
+        
         btnFBLogin.setImage(UIImage(named:"FBButtonSt"), forState: UIControlState.Normal)
         btnFBLogin.setImage(UIImage(named:"FBButtonHover"), forState: UIControlState.Highlighted)
         
@@ -67,9 +67,7 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
             print("Logged in")
             APIAccess.connectToAmazonWebServices()
             //APIAccess.testAPI()
-            APIAccess.requestSituations(AreaRequest(lat: 49.626082, lng:6.159284,radius: 1000.0))
             //APIAccess.requestArea(AreaRequest(lat: 49.626082, lng:6.159284,radius: 1.0))
-
             self.performSegueWithIdentifier("loginTabSegue", sender: self)
             
         }

@@ -16,6 +16,8 @@ class APIAccess{
     - no parameter
     - no return statement
     */
+
+    
     class func connectToAmazonWebServices(){
 
         /*Credentials for login defined in Constants.swift*/
@@ -134,7 +136,6 @@ class APIAccess{
                         //self.deviceType.text = r["device"]
                         //SVProgressHUD.dismiss()
                     })
-                    requestSituationsResponse(task)
                 }
                 else{
                     if (task.result != nil) { //WE HAVE A KNOWN RESULT
@@ -147,7 +148,8 @@ class APIAccess{
                             //self.deviceType.text = r["device"]
                             //SVProgressHUD.dismiss()
                         })
-                        
+                        requestSituationsResponse(task)
+
                     }
                     else { //WE HAVE A UNKNOWS RESULT
                         
@@ -168,12 +170,19 @@ class APIAccess{
         
     }
 
-    
+    let data:NSArray = [""]
     /*
     * Callback function if results were received.
     */
     class func requestSituationsResponse(task:AWSTask) {
-        print(task.result)
+        
+//       let r=task.result as! NSArray
+//        HomeViewController.updateMap(r)
+        //let y=r[0]
+       // print(y["type"])
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        delegate.saveTask(task)
+        
     }
     
     
@@ -366,6 +375,7 @@ class APIAccess{
         print(task.result)
     }
     
+   
   
     
     

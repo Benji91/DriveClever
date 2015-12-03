@@ -21,7 +21,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, PNObjectEventListener {
     
     var client : PubNub
     var config : PNConfiguration
+    var task:AWSTask?
     
+    func saveTask(task:AWSTask) {
+        self.task=task
+    }
+    func printTask(){
+        print(task)
+    }
+    var task2: NSArray = [];
+    
+    func addData(data: NSArray) {
+        self.task2 = data
+    }
     override init() {
         config = PNConfiguration(publishKey: "pub-c-3a992903-bd4b-475b-a76e-bab6f2c23392", subscribeKey: "sub-c-4844d2d2-7e9a-11e5-a643-02ee2ddab7fe")
         client = PubNub.clientWithConfiguration(config)

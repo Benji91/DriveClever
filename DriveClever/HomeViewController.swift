@@ -36,7 +36,41 @@ class HomeViewController: UIViewController, UITabBarDelegate, MKMapViewDelegate,
         self.locationManager.requestWhenInUseAuthorization()
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
+        APIAccess.requestSituations(AreaRequest(lat: 49.626082, lng:6.159284,radius: 1000.0))
+        
+        //APIAccess.requestSituations(AreaRequest(lat: mapView.userLocation.coordinate.latitude, lng:mapView.userLocation.coordinate.longitude,radius: 1000.0))
+
+        let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        sleep(5)
+        //print("Test: ")
+        let r = delegate.task?.result as! NSArray
+        //print(r)
+        populate(r)
+        
     }
+    
+    func populate(r:NSArray) {
+        for dataObject : AnyObject in r
+        {
+            var annotation = MKPointAnnotation()
+
+            let lat = dataObject["lat"] as! Double
+            let long = dataObject["lng"] as! Double
+            
+            var location = CLLocationCoordinate2D(
+                latitude: lat,
+                longitude: long
+            )
+           
+            annotation.coordinate = location
+            annotation.title = dataObject["type"] as! String
+
+            mapView.addAnnotation(annotation)
+
+            //print(dataObject["type"])
+        }
+        }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -47,7 +81,9 @@ class HomeViewController: UIViewController, UITabBarDelegate, MKMapViewDelegate,
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         let location = locations.last
-        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        //let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)$        
+        let center = CLLocationCoordinate2D(latitude: 49.626082, longitude: 6.159284)
+
         let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.009, longitudeDelta: 0.009))
     
         self.mapView.setRegion(region, animated: true)
