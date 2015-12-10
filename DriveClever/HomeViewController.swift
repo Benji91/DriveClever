@@ -48,11 +48,15 @@ class HomeViewController: UIViewController, UITabBarDelegate, MKMapViewDelegate,
         
         APIAccess.requestSituations(AreaRequest(lat: lat, lng: lng,radius: 1000.0))
         
+       
+        
+        
+    }
+    override func viewDidAppear(animated: Bool) {
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         sleep(5)
         let r = delegate.task?.result as! NSArray
         populate(r)
-        
     }
     
     
