@@ -11,41 +11,55 @@ import Foundation
 class Situation{
     
     /*identification number for the database*/
-    var id = ""
+    var id:String
     
     /*GPS Coordinates of a Situation provided by the phone*/
-    var lat = 1.0
-    var lng = 1.0
+    var lat:Double
+    var lng:Double
     
     /*Statistical Data of the situations created*/
-    var createdBy = ""
-    var createdDate = ""
+    var createdBy:String
+    var createdDate:String
     
     /*Type of a situation*/
-    var type = "xy"
+    var type:String
     
     /*Crisis is either open or closed*/
-    var closed = false
+    var closed:Bool
     
     /*3 hits will increment the closeAttemps by 3 and close the crisis every time, otherwise decrement*/
-    var closeAttempts = 0
+    var closeAttempts:Int
     
     /* for type == "TrafficJam"*/
-    var length = 0.0 // cf "Work"
-    var reason = "" //Comment on traffic jam
+    var length:Double // cf "Work"
+    var reason:String //Comment on traffic jam
     
     /* for type == "Control"*/
-    var controlType = ""
+    var controlType:String
     
     /* for type == "Danger"*/
-    var comment = ""
+    var comment:String
     
     /* for type == "Work"*/
     //Double length; // ~ TrafficJam
-    var jamPossibility = 0.0
-    init(){
+    
+    var jamPossibility:Double
+    init(id:String,lat:Double, lng:Double, createdBy:String, createdDate:String,type:String,closed:Bool,closeAttempts:Int,length:Double,reason:String,controlType:String,comment:String,jamPossibility:Double){
+        self.id=id
+        self.lat=lat
+        self.lng=lng
+        self.createdBy=createdBy
+        self.createdDate=createdDate
+        self.type=type
+        self.closed=closed
+        self.closeAttempts=closeAttempts
+        self.length=length
+        self.reason=reason
+        self.controlType=controlType
+        self.comment=comment
+        self.jamPossibility=jamPossibility
         
     }
-
+    
     
 }

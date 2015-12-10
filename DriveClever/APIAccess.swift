@@ -12,14 +12,14 @@ import FBSDKLoginKit
 
 class APIAccess{
     
-       /*FUNCTION INITIALISATION OF THE FACEBOOK ID AND API AWS CONNECTION
+    /*FUNCTION INITIALISATION OF THE FACEBOOK ID AND API AWS CONNECTION
     - no parameter
     - no return statement
     */
-
+    
     
     class func connectToAmazonWebServices(){
-
+        
         /*Credentials for login defined in Constants.swift*/
         let credentialProvider = AWSCognitoCredentialsProvider(regionType: CognitoRegionType, identityPoolId: CognitoIdentityPoolId)
         
@@ -40,9 +40,9 @@ class APIAccess{
     }
     
     /*
-        Test function to check if there is a response of the AWS Services
-            -no param
-            -no return
+    Test function to check if there is a response of the AWS Services
+    -no param
+    -no return
     */
     class func testAPI(){
         
@@ -140,7 +140,7 @@ class APIAccess{
                 else{
                     if (task.result != nil) { //WE HAVE A KNOWN RESULT
                         
-                        NSLog("Invoke Lambda : result = \(task.result)")
+                        //NSLog("Invoke Lambda : result = \(task.result)")
                         //upate text label on the main UI thread if there is anyy
                         dispatch_async(dispatch_get_main_queue(), {
                             //let r = task.result as! Dictionary<String,String>
@@ -149,7 +149,7 @@ class APIAccess{
                             //SVProgressHUD.dismiss()
                         })
                         requestSituationsResponse(task)
-
+                        
                     }
                     else { //WE HAVE A UNKNOWS RESULT
                         
@@ -169,17 +169,17 @@ class APIAccess{
         return true
         
     }
-
+    
     let data:NSArray = [""]
     /*
     * Callback function if results were received.
     */
     class func requestSituationsResponse(task:AWSTask) {
         
-//       let r=task.result as! NSArray
-//        HomeViewController.updateMap(r)
+        //       let r=task.result as! NSArray
+        //        HomeViewController.updateMap(r)
         //let y=r[0]
-       // print(y["type"])
+        // print(y["type"])
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         delegate.saveTask(task)
         
@@ -244,7 +244,7 @@ class APIAccess{
         
         return true
     }
-
+    
     
     /*
     * Callback function if results were received.
@@ -255,9 +255,64 @@ class APIAccess{
     
     
     
+    /*class func reportSituation(sit:Situation) ->Bool{
+    /*invoke lambda function asynchronously*/
+    NSLog("Invoking lambda function for reporting a situation")
+    let lambdaInvoker = AWSLambdaInvoker.defaultLambdaInvoker()
+    
+    /*New task to call the testAPI function (the function call)*/
+    let task = lambdaInvoker.invokeFunction("reportSituation",JSONObject: ["lat":sit.lat,"lng":sit.lng,"type":sit.type])
+    
+    /*Handling the result optained of the function call*/
+    task.continueWithBlock(
+    {
+    
+    (task: AWSTask!) -> AWSTask! in
+    
+    if (task.error != nil) { // NO ERROR OCCURES
+    NSLog("Invoke Lambda returned an error : \(task.error)")
+    dispatch_async(dispatch_get_main_queue(), {
+    //self.greeting.text = "Error"
+    //self.deviceType.text = task.error.description
+    //SVProgressHUD.dismiss()
+    })
+    }
+    else {
+    if (task.result != nil) { //WE HAVE A KNOWN RESULT
+    
+    //NSLog("Invoke Lambda : result = \(task.result)")
+    
+    //upate text label on the main UI thread if there is anyy
+    dispatch_async(dispatch_get_main_queue(), {
+    //let r = task.result as! Dictionary<String,String>
+    //self.greeting.text = r["message"]
+    //self.deviceType.text = r["device"]
+    //SVProgressHUD.dismiss()
+    })
+    reportSituationResponse(task)
+    
+    }
+    else { //WE HAVE A UNKNOWS RESULT
+    
+    NSLog("Invoke Lambda : unknow result : \(task)");
+    NSLog("Exception : \(task.exception)")
+    NSLog("Error : \(task.error)" )
+    
+    dispatch_async(dispatch_get_main_queue(), {
+    //self.greeting.text = "Error"
+    //SVProgressHUD.dismiss()
+    })
+    }
+    }
+    return task
+    })
+    
+    
+    return true
+    }*/
     class func reportSituation(sit:Situation) ->Bool{
         /*invoke lambda function asynchronously*/
-        NSLog("Invoking lambda function for requesting a situation")
+        NSLog("Invoking lambda function for reporting a situation")
         let lambdaInvoker = AWSLambdaInvoker.defaultLambdaInvoker()
         
         /*New task to call the testAPI function (the function call)*/
@@ -310,6 +365,7 @@ class APIAccess{
         
         return true
     }
+    
     
     class func reportSituationResponse(task:AWSTask)   {
         print(task.result)
@@ -375,8 +431,8 @@ class APIAccess{
         print(task.result)
     }
     
-   
-  
+    
+    
     
     
     

@@ -8,11 +8,14 @@
 
 import UIKit
 import AVFoundation
+import MapKit
 
-class PostViewController: UIViewController, UITextFieldDelegate,WitDelegate{
+
+class PostViewController: UIViewController, UITextFieldDelegate, WitDelegate, CLLocationManagerDelegate{
     
+    let locationManager = CLLocationManager()
     let textView:UITextView! = UITextView()
-
+    
     override func viewDidLoad() {
         let screenWidth = UIScreen.mainScreen().bounds.width
         let screenHeight = UIScreen.mainScreen().bounds.height
@@ -38,19 +41,28 @@ class PostViewController: UIViewController, UITextFieldDelegate,WitDelegate{
         
         textView.frame = CGRectMake(0,header.frame.height,screenWidth,screenHeight*0.9)
         textView.editable = false
+        textView.font=UIFont(descriptor: UIFontDescriptor(name: "Papyrus", size: 30), size: 30)
+        textView.text="Please press on the button to start recording... You can report by saying Police, Construction, Traffic jam, Accident"
+        
         self.view.addSubview(textView)
         
         
-     
+        
         Wit.sharedInstance().delegate = self
-
+        
         let btnVoiceRecog = WITMicButton()
         
         btnVoiceRecog.frame = CGRectMake(100, 100, 100, 100)
         btnVoiceRecog.center = CGPointMake(textView.center.x,screenHeight-200)
-
+        
         
         textView.addSubview(btnVoiceRecog)
+        
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.startUpdatingLocation()
+        
         
         super.viewDidLoad()
         
@@ -60,6 +72,9 @@ class PostViewController: UIViewController, UITextFieldDelegate,WitDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func witDidStartRecording() {
+        textView.text="Please start talking and repress the button when you have finished"
     }
     
     
@@ -72,12 +87,43 @@ class PostViewController: UIViewController, UITextFieldDelegate,WitDelegate{
         let outcomes : NSArray = outcomes!
         let firstOutcome : NSDictionary = outcomes.objectAtIndex(0) as! NSDictionary
         let intent : String = firstOutcome.objectForKey("intent")as! String
-        textView.text = intent
+        //let text = intent + " " + self.locationManager.location!.coordinate.latitude.description + " " + self.locationManager.location!.coordinate.longitude.description
         
+        //textView.text = text
+        
+        textView.font=UIFont(descriptor: UIFontDescriptor(name: "Papyrus", size: 30), size: 30)
+        
+        
+        if (intent=="UNKNOWN"){
+            textView.text="Please retry your text was not understandeable.Press the button to start recording.."
+        }
+        else{
+            textView.text = "We stored a "+intent
+            
+            let id = Int(arc4random_uniform(1000000) + 1)
+            let todaysDate:NSDate = NSDate()
+            let dateFormatter:NSDateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "MM-dd-yyyy HH:mm"
+            let dateInFormat:String = dateFormatter.stringFromDate(todaysDate)
+            
+            let situation:Situation = Situation(
+                id: id.description,
+                lat: self.locationManager.location!.coordinate.latitude,
+                lng: self.locationManager.location!.coordinate.longitude,
+                createdBy: "JAHIC Benjamin",
+                createdDate: dateInFormat,
+                type: intent,
+                closed: false,
+                closeAttempts: 0,
+                length: 0, reason: "", controlType: "", comment: "", jamPossibility: 0)
+            
+            APIAccess.reportSituation(situation)
+            
+        }
         //labelView!.text = intent
         //labelView!.sizeToFit()
     }
-
+    
     
     
     // MARK : - UITextFieldDelegate
@@ -86,5 +132,5 @@ class PostViewController: UIViewController, UITextFieldDelegate,WitDelegate{
         textField.resignFirstResponder()
         return true
     }
-       
+    
 }
