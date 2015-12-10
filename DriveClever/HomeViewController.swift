@@ -37,8 +37,6 @@ class HomeViewController: UIViewController, UITabBarDelegate, MKMapViewDelegate,
         self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
         
-        let lat = self.locationManager.location!.coordinate.latitude
-        let lng = self.locationManager.location!.coordinate.longitude
         
         //APIAccess.requestSituations(AreaRequest(lat: 49.626082, lng:6.159284,radius: 1000.0))
         
@@ -46,13 +44,14 @@ class HomeViewController: UIViewController, UITabBarDelegate, MKMapViewDelegate,
         //APIAccess.requestSituations(AreaRequest(lat: (self.locationManager.location?.coordinate.latitude)!, lng: (self.locationManager.location?.coordinate.longitude)!,radius: 1000.0))
         
         
-        APIAccess.requestSituations(AreaRequest(lat: lat, lng: lng,radius: 1000.0))
         
-       
-        
-        
+    
     }
     override func viewDidAppear(animated: Bool) {
+        let lat = self.locationManager.location!.coordinate.latitude
+        let lng = self.locationManager.location!.coordinate.longitude
+        APIAccess.requestSituations(AreaRequest(lat: lat, lng: lng,radius: 1000.0))
+
         let delegate = UIApplication.sharedApplication().delegate as! AppDelegate
         sleep(5)
         let r = delegate.task?.result as! NSArray
