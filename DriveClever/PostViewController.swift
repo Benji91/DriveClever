@@ -54,8 +54,6 @@ class PostViewController: UIViewController, UITextFieldDelegate, WitDelegate, CL
         
         btnVoiceRecog.frame = CGRectMake(100, 100, 100, 100)
         btnVoiceRecog.center = CGPointMake(textView.center.x,screenHeight-200)
-        
-        
         textView.addSubview(btnVoiceRecog)
         
         self.locationManager.delegate = self
@@ -69,14 +67,23 @@ class PostViewController: UIViewController, UITextFieldDelegate, WitDelegate, CL
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        textView.text="Please press on the button to start recording... You can report by saying Police, Construction, Traffic jam, Accident"
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func witDidStartRecording() {
-        textView.text="Please start talking and repress the button when you have finished"
-    }
     
+    func witDidStartRecording() {
+        textView.text="Recording started.. Police, Construction, Traffic jam, Accident ?"
+    }
+    func witDidStopRecording() {
+        textView.text="Recording finished.. Evaluating results.."
+    }
     
     func witDidGraspIntent(outcomes: [AnyObject]!, messageId: String!, customData: AnyObject!, error e: NSError!) {
         if ((e) != nil) {
