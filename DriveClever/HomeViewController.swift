@@ -38,15 +38,10 @@ class HomeViewController: UIViewController, UITabBarDelegate, MKMapViewDelegate,
         self.mapView.showsUserLocation = true
         
         
-        //APIAccess.requestSituations(AreaRequest(lat: 49.626082, lng:6.159284,radius: 1000.0))
-        
-        //APIAccess.connectToAmazonWebServices()
-        //APIAccess.requestSituations(AreaRequest(lat: (self.locationManager.location?.coordinate.latitude)!, lng: (self.locationManager.location?.coordinate.longitude)!,radius: 1000.0))
-        
-        
         
     
     }
+    
     override func viewDidAppear(animated: Bool) {
         let lat = self.locationManager.location!.coordinate.latitude
         let lng = self.locationManager.location!.coordinate.longitude
@@ -61,6 +56,8 @@ class HomeViewController: UIViewController, UITabBarDelegate, MKMapViewDelegate,
     
     
     func populate(r:NSArray) {
+        mapView.removeAnnotations(mapView.annotations)
+
         for dataObject : AnyObject in r
         {
             var annotation = MKPointAnnotation()
@@ -74,15 +71,16 @@ class HomeViewController: UIViewController, UITabBarDelegate, MKMapViewDelegate,
             )
             
             annotation.coordinate = location
-            annotation.title = dataObject["type"] as! String
+            let type = dataObject["type"] as! String
+            annotation.title=type
             
+                        
             mapView.addAnnotation(annotation)
             
         }
+        
     }
-    
-    
-    override func didReceiveMemoryWarning() {
+        override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
